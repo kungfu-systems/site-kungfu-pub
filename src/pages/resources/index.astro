@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import ResourceLibrary from '../../components/ResourceLibrary';
+---
+
+<Base title="精选资料库" section="resources"
+  ><div class="container page-content">
+    <div class="page-heading">
+      <span class="eyebrow">THE READING ROOM / 精选资料库</span><h1>值得花时间的，放在这里。</h1><p>
+        原创教程与外部资料互相补充。每份推荐都说明来源、适合谁以及为什么读，<br
+        />让搜寻少一点，让理解多一点。
+      </p>
+    </div><div class="original-banner">
+      <span>功夫原创 / 从实践中理解</span><a href="/tutorials/agent-basics/">认识 Agent →</a><a
+        href="/tutorials/define-a-task/">定义一个好任务 →</a
+      ><a href="/tutorials/tool-contract/">设计工具边界 →</a>
+    </div><ResourceLibrary client:load />
+  </div></Base
+>

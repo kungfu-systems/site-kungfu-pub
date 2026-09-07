@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import SiteSearch from '../components/SiteSearch';
+---
+
+<Base title="搜索" section="search"
+  ><div class="container page-content" data-pagefind-ignore>
+    <div class="page-heading">
+      <span class="eyebrow">FIND YOUR NEXT STEP / 站内搜索</span><h1>
+        带着问题，找到答案的入口。
+      </h1><p>一起搜索学习路线、原创教程、精选资料和行业观察。</p>
+    </div><SiteSearch client:load />
+  </div></Base
+>
