@@ -5,23 +5,17 @@ theme: kungfu-pub
 doc_type: guide
 source_level: local-files
 confidence: medium
-sensitivity: internal
+sensitivity: public
 evidence_grade: B
 review_state: unreviewed
 last_reviewed: '2026-09-07'
-ai_provenance:
-  model_family: GPT-6
-  product: Codex
-  generated_at: '2026-09-07'
-  visible_context: User brief and current repository implementation
-  invisible_context_boundary: No production deployment or user validation
 ---
 
 # site-kungfu-pub
 
 A Simplified Chinese Agent learning and observation site, intended for `kungfu.pub`.
 
-The first preview contains three learning paths, three original tutorial drafts, three curated resources, three editorial observation notes, and an employment-observation entry page. The GitHub repository is private. Product and content review continue before public deployment.
+The first preview contains three learning paths, three original tutorial drafts, three curated resources, three editorial observation notes, and an employment-observation entry page. Product and content review continue before public deployment.
 
 ## Run locally
 

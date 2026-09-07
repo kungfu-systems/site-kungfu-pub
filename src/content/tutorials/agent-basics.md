@@ -15,12 +15,6 @@ sensitivity: public
 evidence_grade: B
 review_state: unreviewed
 last_reviewed: '2026-09-07'
-ai_provenance:
-  model_family: GPT-6
-  product: Codex
-  generated_at: '2026-09-07'
-  visible_context: User brief and cited public documentation
-  invisible_context_boundary: No production execution or learning-outcome validation
 ---
 
 ## 先从一个具体问题开始
