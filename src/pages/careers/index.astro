@@ -1,0 +1,74 @@
+---
+import Base from '../../layouts/Base.astro';
+import { ArrowUpRight, Download, ScanLine, ListFilter, ChartNoAxesCombined } from 'lucide-react';
+import catalog from '../../data/catalog.json';
+---
+
+<Base title="职业雷达" section="careers"
+  ><div class="container page-content">
+    <div class="page-heading">
+      <span class="eyebrow">CAREER RADAR / 职业雷达</span><h1>让下一步学习，连接真实工作。</h1><p>
+        从公开招聘信息出发，理解岗位在做什么、需要什么能力。<br
+        />观察长期变化，为自己的学习与实践找到参照。
+      </p>
+    </div><div class="career-status">
+      <span class="status-dot"></span><b>观察计划 · 样本建设中</b><p>
+        首期开放官方招聘入口与采样方法。连续样本建立后，再提供趋势统计。
+      </p>
+    </div><div class="section-heading">
+      <div>
+        <span class="eyebrow">PRIMARY SOURCES / 原始来源</span><h2>从企业的官方入口开始。</h2>
+      </div>
+    </div><div class="career-source-grid">
+      {
+        catalog.careerSources.map((s) => (
+          <a class="career-source" href={s.url} target="_blank" rel="noopener noreferrer">
+            <>
+              <span class="source-letter">{s.mark}</span>
+              <div>
+                <>
+                  <h2>{s.name}</h2>
+                  <span>官方招聘入口</span>
+                  <p>{s.description}</p>
+                </>
+              </div>
+              <ArrowUpRight size={23} />
+            </>
+          </a>
+        ))
+      }
+    </div><p class="storage-note">
+      入口核对日期：2026.09.07。具体职位以原站为准；本站尚未统计在招岗位与薪资。
+    </p><section class="note-panel">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">OBSERVATION FRAMEWORK / 观察方法</span><h2>
+            有样本，才有可以讨论的变化。
+          </h2>
+        </div><a href="/hiring-observation-template.csv" download class="button secondary"
+          ><Download size={16} /> 下载采样模板</a>
+      </div><div class="three-notes">
+        <div>
+          <ScanLine size={24} /><b>01 · 保留来源</b><p>
+            记录岗位 ID、原始链接、发布日期、观察日期与地区，区分原文和解读。
+          </p>
+        </div><div>
+          <ListFilter size={24} /><b>02 · 统一口径</b><p>
+            按职责与能力分类，同一岗位去重。撤下状态与新增状态分别记录。
+          </p>
+        </div><div>
+          <ChartNoAxesCombined size={24} /><b>03 · 再看变化</b><p>
+            比较一致来源的多个时间截面，同时说明覆盖范围与尚未验证的问题。
+          </p>
+        </div>
+      </div>
+    </section><section class="career-learning">
+      <div>
+        <span class="eyebrow">CONNECT THE DOTS</span><h2>把岗位要求，变成学习问题。</h2><p>
+          看到“工具调用与评估经验”，可以先练习工具边界、测试样例与结果验证。
+        </p>
+      </div><a href="/roadmaps/builder/" class="button primary"
+        >进入构建者路线 <ArrowUpRight size={18} /></a>
+    </section>
+  </div></Base
+>

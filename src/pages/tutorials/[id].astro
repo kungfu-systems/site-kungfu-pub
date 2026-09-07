@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+export async function getStaticPaths() {
+  return (await getCollection('tutorials')).map((entry) => ({
+    params: { id: entry.id },
+    props: { entry },
+  }));
+}
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+---
+
+<Base title={entry.data.title} description={entry.data.description} section="resources"
+  ><div class="container article-container">
+    <a href="/resources/" class="breadcrumb">← 返回学习资料</a><div class="page-heading compact">
+      <span class="eyebrow">KUNGFU ORIGINAL / 功夫原创</span><h1>{entry.data.title}</h1><p>
+        {entry.data.description}
+      </p>
+    </div><div class="article-metadata">
+      <span>{entry.data.category}</span><span>约 {entry.data.minutes} 分钟</span><span
+        >更新 {entry.data.updated}</span
+      ><span>初稿 · 待审阅</span>
+    </div><nav class="article-toc" aria-label="文章目录">
+      <b>这篇会读到</b>{
+        headings.filter((h) => h.depth === 2).map((h) => <a href={`#${h.slug}`}>{h.text}</a>)
+      }
+    </nav><article class="prose"><Content /></article><div class="article-next">
+      <span>把阅读变成一个小实践。</span><a href="/roadmaps/foundation/" class="button primary"
+        >回到学习路线 →</a>
+    </div>
+  </div></Base
+>

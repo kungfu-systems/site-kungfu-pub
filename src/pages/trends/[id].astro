@@ -1,0 +1,123 @@
+---
+import Base from '../../layouts/Base.astro';
+import catalog from '../../data/catalog.json';
+export function getStaticPaths() {
+  return catalog.observations.map((observation) => ({
+    params: { id: observation.id },
+    props: { observation },
+  }));
+}
+const { observation: o } = Astro.props;
+---
+
+<Base title={o.title} description={o.description} section="trends"
+  ><div class="container article-container">
+    <a class="breadcrumb" href="/trends/">← 全部观察</a><div class="page-heading compact">
+      <span class="eyebrow">{o.category} / {o.kind}</span><h1>{o.title}</h1><p>{o.description}</p>
+    </div><div class="article-metadata">
+      <span>功夫 Pub 编辑导读</span><span>2026.09.07</span><span>初稿 · 待审阅</span>
+    </div><article class="prose">
+      {
+        o.id === 'tool-protocols' ? (
+          <>
+            <>
+              <h2>从来源中能看到什么</h2>
+              <p>
+                MCP 官方介绍讨论模型应用如何连接外部系统；Qwen-Agent
+                官方指南展示在具体框架中配置和调用工具的方式。二者分别帮助理解连接约定与实现入口。
+              </p>
+              <h2>我们的阅读建议</h2>
+              <p>
+                把“能否调用”与“是否应该调用”分开检查。前者涉及参数、连接方式和返回数据；后者涉及任务需要、权限以及结果是否可信。读框架示例时，逐一标出这两组问题。
+              </p>
+              <h2>值得继续验证</h2>
+              <p>
+                选定一个具体模型和框架版本，观察参数错误、工具超时、资料缺失时会怎样。协议存在并不证明每个产品都支持全部能力，也不代表应用已具备生产可靠性。
+              </p>
+              <h2>一个小实践</h2>
+              <p>
+                为只读文件检索工具写出三个测试：找到目标、没有结果、参数非法。记录工具输出和 Agent
+                最后的回答，检查是否相互一致。
+              </p>
+            </>
+          </>
+        ) : o.id === 'learning-to-building' ? (
+          <>
+            <>
+              <h2>从来源中能看到什么</h2>
+              <p>
+                Hugging Face Agents
+                课程的介绍同时列出基础单元、框架、应用实践与最终项目。这提供了一种从概念走向实践的课程组织参考。
+              </p>
+              <h2>我们的阅读建议</h2>
+              <p>
+                可以给每个学习阶段安排一个小产物：概念阶段画关系图，工具阶段实现只读动作，评估阶段整理成功与失败样例。最后把这些产物组合成一个可以复查的项目。
+              </p>
+              <h2>不要把完成课程等同于掌握能力</h2>
+              <p>
+                读过材料、完成练习和能解决自己的问题，是不同的证据。建议保留输入、运行条件、结果与限制，让别人可以重新检查。
+              </p>
+              <h2>一个小实践</h2>
+              <p>
+                选择一份不含敏感信息的资料集，设计一个能给出来源的检索任务。用三种问题检验：有明确答案、信息不足、资料存在矛盾。
+              </p>
+            </>
+          </>
+        ) : (
+          <>
+            <>
+              <h2>先建立一致的观察口径</h2>
+              <p>
+                从企业官方招聘入口选取与 Agent 有关的岗位，记录岗位
+                ID、原始链接、工作地点、职责、能力要求、发布时间和首次观察日期。观察日期不能替代岗位发布时间。
+              </p>
+              <h2>比较哪些维度</h2>
+              <p>
+                将岗位按应用开发、工程交付、研究等职责分类。记录工具调用、检索、评估、数据工程和交付经验等要求，但不要把不同名称直接当作相同技能。
+              </p>
+              <h2>何时可以讨论趋势</h2>
+              <p>
+                只有在相同来源和相近采样方法下积累多个时间截面，才适合讨论样本的变化。去重、职位撤下和样本覆盖都会影响结果，应同时说明。
+              </p>
+              <h2>当前边界</h2>
+              <p>
+                首期尚未建立连续招聘样本，不提供岗位数量、薪资分布或增长率。官方入口可用于自行查看当前职位，不能把入口的存在视为某家公司正在招聘某个具体岗位的证明。
+              </p>
+              <p>
+                <a href="/careers/">进入职业雷达，查看来源和采样模板 →</a>
+              </p>
+            </>
+          </>
+        )
+      }
+      <h2>原始来源</h2>{
+        o.resourceIds.length > 0 ? (
+          <ul>
+            {o.resourceIds.map((id) => {
+              const r = catalog.resources.find((r) => r.id === id)!;
+              return (
+                <li>
+                  <a href={r.url} target="_blank" rel="noopener noreferrer">
+                    {r.source} ↗
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <ul>
+            {catalog.careerSources.map((s) => (
+              <li>
+                <a href={s.url} target="_blank" rel="noopener noreferrer">
+                  {s.name}官方招聘入口 ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }<p class="article-boundary">
+        来源核对日期：2026-09-07。本文是编辑导读与方法建议，不是实时新闻、市场统计或企业用工结论。
+      </p>
+    </article>
+  </div></Base
+>

@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import catalog from '../../data/catalog.json';
+import { ArrowUpRight } from 'lucide-react';
+export function getStaticPaths() {
+  return catalog.resources.map((resource) => ({
+    params: { id: resource.id },
+    props: { resource },
+  }));
+}
+const { resource: r } = Astro.props;
+---
+
+<Base title={r.title} description={r.description} section="resources"
+  ><div class="container article-container">
+    <a href="/resources/" class="breadcrumb">← 返回资料库</a><div class="page-heading compact">
+      <div class="eyebrow">CURATED RESOURCE / 外部精选</div><h1>{r.title}</h1><p>{r.description}</p>
+    </div><div class="article-metadata">
+      <span>{r.source}</span><span>{r.language} · {r.level}</span><span>核验日期 2026.09.07</span>
+    </div><div class="prose">
+      <h2>为什么收录</h2><p>
+        {
+          r.id === 'hf-agents'
+            ? '这份课程把基础概念、框架和项目实践放在连续的学习结构中，适合建立完整知识地图。建议先读概览，再选择一个单元动手。'
+            : r.id === 'qwen-agent'
+              ? '这份官方指南给出了具体框架的工具接入示例，适合已经了解 Agent 概念、希望进一步阅读代码的人。建议先理解输入输出，再研究配置。'
+              : '这份官方介绍提供理解工具连接协议的入口，适合建立宿主、客户端和服务端的概念关系。协议能力与具体产品实现需要分别核对。'
+        }
+      </p><h2>怎样开始</h2><p>
+        先写下你要回答的一个问题，再带着问题阅读原文。读完后，用一个自己的例子解释所学内容；涉及代码时，请以原站当前版本说明为准。
+      </p><h2>来源与边界</h2><p>
+        本站提供原创导读和原站指针。材料正文与更新由原作者维护；外部站点的网络可达性、语言覆盖与内容可能发生变化。
+      </p><p>来源：<a href={r.url} target="_blank" rel="noopener noreferrer">{r.source} ↗</a></p>
+    </div><a class="button primary" href={r.url} target="_blank" rel="noopener noreferrer"
+      >前往原始资料 <ArrowUpRight size={18} /></a>
+  </div></Base
+>

@@ -1,0 +1,180 @@
+{
+  "reviewedAt": "2026-09-07",
+  "resources": [
+    {
+      "id": "hf-agents",
+      "title": "Hugging Face Agents 中文课程",
+      "description": "从 Agent 基础概念到框架与项目实践，一条可以按单元推进的开放课程。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/learn/agents-course/zh-CN/unit0/introduction",
+      "type": "系统课程",
+      "language": "中文",
+      "level": "入门",
+      "tags": ["Agent 基础", "项目实践"],
+      "mark": "HF",
+      "color": "yellow"
+    },
+    {
+      "id": "qwen-agent",
+      "title": "Qwen-Agent 开发指南",
+      "description": "了解工具调用、模型配置与工具接入，用一个具体框架连接概念和代码。",
+      "source": "Qwen 官方文档",
+      "url": "https://qwen.readthedocs.io/zh-cn/latest/framework/qwen_agent.html",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "进阶",
+      "tags": ["工具调用", "Qwen"],
+      "mark": "Q",
+      "color": "purple"
+    },
+    {
+      "id": "mcp",
+      "title": "MCP：连接模型与外部工具",
+      "description": "从官方介绍理解连接协议的角色，建立工具、资源和宿主之间的关系。",
+      "source": "Model Context Protocol",
+      "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
+      "type": "官方文档",
+      "language": "英文",
+      "level": "进阶",
+      "tags": ["MCP", "工具调用"],
+      "mark": "↗",
+      "color": "ink"
+    }
+  ],
+  "roadmaps": [
+    {
+      "id": "foundation",
+      "number": "01",
+      "title": "从零认识 Agent",
+      "subtitle": "先理解，再动手。",
+      "description": "建立概念，拆解任务，辨别什么时候需要 Agent。",
+      "level": "零基础",
+      "duration": "4 个学习节点",
+      "icon": "compass",
+      "nodes": ["understand", "task", "tools", "verify"]
+    },
+    {
+      "id": "builder",
+      "number": "02",
+      "title": "构建第一个 Agent",
+      "subtitle": "让想法真正运行。",
+      "description": "从工具调用到检索，把一次演示做成一个可验证的小项目。",
+      "level": "有编程基础",
+      "duration": "4 个学习节点",
+      "icon": "code",
+      "nodes": ["task", "tools", "retrieval", "verify"]
+    },
+    {
+      "id": "practice",
+      "number": "03",
+      "title": "走向可靠的实践",
+      "subtitle": "关注失败，也关注结果。",
+      "description": "为任务加上边界、评估和恢复，让 Agent 更可靠地完成工作。",
+      "level": "已有实践经验",
+      "duration": "4 个学习节点",
+      "icon": "layers",
+      "nodes": ["tools", "retrieval", "verify", "delivery"]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "understand",
+      "title": "认识 Agent",
+      "description": "分清对话、固定流程与自主决策，建立最小概念地图。",
+      "prerequisites": [],
+      "tutorial": "agent-basics",
+      "resourceIds": ["hf-agents"],
+      "outcome": "用自己的话解释 Agent 与固定工作流的区别。"
+    },
+    {
+      "id": "task",
+      "title": "定义一个好任务",
+      "description": "把目标写成可检查的结果，明确输入和允许的操作。",
+      "prerequisites": ["understand"],
+      "tutorial": "define-a-task",
+      "resourceIds": ["hf-agents"],
+      "outcome": "写出一个包含目标、输入、边界、验收条件的任务说明。"
+    },
+    {
+      "id": "tools",
+      "title": "连接工具与世界",
+      "description": "理解工具的输入、输出和权限，用小范围的动作完成验证。",
+      "prerequisites": ["task"],
+      "tutorial": "tool-contract",
+      "resourceIds": ["qwen-agent", "mcp"],
+      "outcome": "为一个只读工具写出参数、返回值和失败处理。"
+    },
+    {
+      "id": "retrieval",
+      "title": "检索与上下文",
+      "description": "区分资料检索和回答生成，为输出保留可追溯的来源。",
+      "prerequisites": ["tools"],
+      "tutorial": null,
+      "resourceIds": ["hf-agents", "qwen-agent"],
+      "outcome": "在一个小型资料集中找出来源，并检查回答是否忠于来源。"
+    },
+    {
+      "id": "verify",
+      "title": "评估与纠错",
+      "description": "检查结果、记录失败，判断继续执行还是交还给人。",
+      "prerequisites": ["tools"],
+      "tutorial": "define-a-task",
+      "resourceIds": ["hf-agents"],
+      "outcome": "为任务列出一个成功样例和两个失败样例。"
+    },
+    {
+      "id": "delivery",
+      "title": "完成一次真实交付",
+      "description": "将目标、过程记录和结果放在一起，让他人能够复查。",
+      "prerequisites": ["verify"],
+      "tutorial": "tool-contract",
+      "resourceIds": ["qwen-agent"],
+      "outcome": "提交一份包含运行说明、结果和限制的小项目记录。"
+    }
+  ],
+  "observations": [
+    {
+      "id": "tool-protocols",
+      "category": "技术观察",
+      "title": "读懂工具连接，先从协议与边界开始",
+      "description": "对照 MCP 官方介绍与 Qwen-Agent 工具配置，理解“接上工具”之后还需要检查什么。",
+      "source": "MCP · Qwen 官方文档",
+      "resourceIds": ["mcp", "qwen-agent"],
+      "kind": "编辑导读"
+    },
+    {
+      "id": "learning-to-building",
+      "category": "学习观察",
+      "title": "把学习路线的终点，设成一个可验证的项目",
+      "description": "从课程单元走向项目实践：不仅记录学过什么，也记录做出了什么、如何证明。",
+      "source": "Hugging Face Agents 课程",
+      "resourceIds": ["hf-agents"],
+      "kind": "编辑导读"
+    },
+    {
+      "id": "hiring-method",
+      "category": "职业观察",
+      "title": "看 Agent 招聘，先看工作内容与能力要求",
+      "description": "用统一的样本表记录岗位，区分应用开发、工程交付和研究职责，再讨论变化。",
+      "source": "招聘观察方法",
+      "resourceIds": [],
+      "kind": "观察方法"
+    }
+  ],
+  "careerSources": [
+    {
+      "id": "bytedance",
+      "name": "字节跳动",
+      "url": "https://jobs.bytedance.com/experienced/position",
+      "description": "在官方社招入口检索 Agent、智能体、AI 应用等关键词。",
+      "mark": "B"
+    },
+    {
+      "id": "tencent",
+      "name": "腾讯",
+      "url": "https://careers.tencent.com/",
+      "description": "查看具体职责、技术要求与岗位更新时间，保留原始链接。",
+      "mark": "T"
+    }
+  ]
+}

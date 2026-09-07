@@ -1,0 +1,39 @@
+---
+import Base from '../../layouts/Base.astro';
+import RoadmapExplorer from '../../components/RoadmapExplorer';
+import catalog from '../../data/catalog.json';
+export function getStaticPaths() {
+  return catalog.roadmaps.map((roadmap) => ({ params: { id: roadmap.id }, props: { roadmap } }));
+}
+const { roadmap } = Astro.props;
+---
+
+<Base title={roadmap.title} section="roadmaps"
+  ><div class="container page-content">
+    <a class="breadcrumb" href="/roadmaps/">← 全部学习路线</a><div class="page-heading compact">
+      <span class="eyebrow">PATH {roadmap.number} / {roadmap.level}</span><h1>{roadmap.title}</h1><p
+      >
+        {roadmap.description}
+      </p>
+    </div><RoadmapExplorer client:load id={roadmap.id} /><section class="static-outline">
+      <h2>路线总览</h2><ol>
+        {
+          roadmap.nodes.map((id) => {
+            const n = catalog.nodes.find((n) => n.id === id)!;
+            return (
+              <li>
+                <strong>{n.title}</strong> — {n.outcome}
+                {n.tutorial && (
+                  <>
+                    {' '}
+                    <a href={`/tutorials/${n.tutorial}/`}>阅读教程 →</a>
+                  </>
+                )}
+              </li>
+            );
+          })
+        }
+      </ol>
+    </section>
+  </div></Base
+>
