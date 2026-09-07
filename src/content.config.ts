@@ -21,7 +21,6 @@ const tutorials = defineCollection({
     evidence_grade: z.string(),
     review_state: z.string(),
     last_reviewed: z.string(),
-    ai_provenance: z.record(z.string(), z.unknown()),
   }),
 });
 export const collections = { tutorials };

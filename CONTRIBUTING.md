@@ -5,16 +5,10 @@ theme: kungfu-pub
 doc_type: guide
 source_level: local-files
 confidence: medium
-sensitivity: internal
+sensitivity: public
 evidence_grade: B
 review_state: unreviewed
 last_reviewed: '2026-09-07'
-ai_provenance:
-  model_family: GPT-6
-  product: Codex
-  generated_at: '2026-09-07'
-  visible_context: User brief and current repository implementation
-  invisible_context_boundary: No production deployment or user validation
 ---
 
 # Contributing
@@ -37,6 +31,10 @@ Keep `package-lock.json` current. Do not commit generated `dist`, dependencies o
 ## Content
 
 Tutorial Markdown uses schema-checked frontmatter. Preserve source links, editorial status, review date and provenance. Resource entries contain source-owned URLs; tutorial bodies are original editorial work. Mark editorial drafts visibly. Career observations need dated samples and explicit scope before statistics can be published.
+
+## Continuous integration
+
+Pull requests and main-branch pushes run the hosted `Site checks` job: lockfile install, type/content checks, static build and DCO verification for pull-request commits. It publishes no site and uses no deployment secrets.
 
 ## Change review
 
