@@ -1,0 +1,122 @@
+[
+  {
+    "id": "MOE_S2024",
+    "title": "全国普通高等学校名单2024",
+    "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/202406/W020240621412769813275.xls",
+    "type": "school_registry",
+    "year": 2024,
+    "publisher": "教育部"
+  },
+  {
+    "id": "MOE_S2025",
+    "title": "全国普通高等学校名单2025",
+    "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202506/W020250729615142156867.xls",
+    "type": "school_registry",
+    "year": 2025,
+    "publisher": "教育部"
+  },
+  {
+    "id": "MOE_S2026",
+    "title": "全国普通高等学校名单2026",
+    "url": "https://www.moe.gov.cn/jyb_xxgk/s5743/s5744/A03/202606/W020260618416094865984.xls",
+    "type": "school_registry",
+    "year": 2026,
+    "publisher": "教育部"
+  },
+  {
+    "id": "MOE_P2024",
+    "title": "本科专业目录2024",
+    "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s4930/202403/W020240319305498791768.pdf",
+    "type": "major_catalog",
+    "year": 2024,
+    "publisher": "教育部"
+  },
+  {
+    "id": "MOE_P2025",
+    "title": "本科专业目录2025",
+    "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s4930/202504/W020250422312780837078.pdf",
+    "type": "major_catalog",
+    "year": 2025,
+    "publisher": "教育部"
+  },
+  {
+    "id": "MOE_P2026",
+    "title": "本科专业目录2026",
+    "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s3882/202604/W020260427440749576927.pdf",
+    "type": "major_catalog",
+    "year": 2026,
+    "publisher": "教育部"
+  },
+  {
+    "id": "MOE_A2024",
+    "title": "2023年度本科专业备案审批（2024发布）",
+    "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s4930/202403/W020240319305498774149.pdf",
+    "type": "program_changes",
+    "year": 2024,
+    "publisher": "教育部"
+  },
+  {
+    "id": "MOE_A2025",
+    "title": "2024年度本科专业备案审批（2025发布）",
+    "url": "https://www.moe.gov.cn/srcsite/A08/moe_1034/s4930/202504/W020250422312780758186.pdf",
+    "type": "program_changes",
+    "year": 2025,
+    "publisher": "教育部"
+  },
+  {
+    "id": "BJ2024",
+    "title": "北京市2024普通类本科招生专业目录",
+    "url": "https://www.bjeea.cn/uploads/soft/240624/北京市2024年普通高等学校招生专业目录普通类（本科）.pdf",
+    "type": "province_plan",
+    "year": 2024,
+    "publisher": "北京教育考试院"
+  },
+  {
+    "id": "BJ2025",
+    "title": "北京市2025招生专业目录",
+    "url": "https://www.bjeea.cn/uploads/20250613/202506131926-3.pdf",
+    "type": "province_plan",
+    "year": 2025,
+    "publisher": "北京教育考试院"
+  },
+  {
+    "id": "BJ2026",
+    "title": "北京市2026招生专业目录",
+    "url": "https://www.bjeea.cn/uploads/soft/260622/北京市2026年普通高等学校招生专业目录.pdf",
+    "type": "province_plan",
+    "year": 2026,
+    "publisher": "北京教育考试院"
+  },
+  {
+    "id": "BJ_FIX2025",
+    "title": "北京2025目录补充",
+    "url": "https://bjksb.bjeea.cn/html/gkgz/tzgg/2025/0626/87183.html",
+    "type": "plan_correction",
+    "year": 2025,
+    "publisher": "北京教育考试院"
+  },
+  {
+    "id": "BJ_FIX2026",
+    "title": "北京2026目录补充",
+    "url": "https://www.bjeea.cn/html/gkgz/tzgg/2026/0625/88244.html",
+    "type": "plan_correction",
+    "year": 2026,
+    "publisher": "北京教育考试院"
+  },
+  {
+    "id": "STAT2024",
+    "title": "2024全国教育事业统计公报",
+    "url": "https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202506/t20250611_1193760.html",
+    "type": "national_statistics",
+    "year": 2024,
+    "publisher": "教育部"
+  },
+  {
+    "id": "STAT2025",
+    "title": "2025全国教育事业统计公报",
+    "url": "https://www.moe.gov.cn/jyb_sjzl/sjzl_fztjgb/202607/t20260706_1442870.html",
+    "type": "national_statistics",
+    "year": 2025,
+    "publisher": "教育部"
+  }
+]
