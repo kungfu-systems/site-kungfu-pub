@@ -28,6 +28,10 @@ npm run preview
 
 Keep `package-lock.json` current. Do not commit generated `dist`, dependencies or browser artifacts. Review screenshots belong under ignored `output/playwright/`.
 
+The optional local employment pipeline and its offline tests are documented in
+[tools/job_market/README.md](tools/job_market/README.md). CI runs these tests with
+synthetic fixtures; it does not collect jobs or publish captured data.
+
 ## Content
 
 Tutorial Markdown uses schema-checked frontmatter. Preserve source links, editorial status, review date and provenance. Resource entries contain source-owned URLs; tutorial bodies are original editorial work. Mark editorial drafts visibly. Career observations need dated samples and explicit scope before statistics can be published.

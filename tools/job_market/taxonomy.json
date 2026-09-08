@@ -1,0 +1,165 @@
+{
+  "version": "2026-09-08.1",
+  "skills": [
+    {
+      "id": "python",
+      "label": "Python",
+      "pattern": "(?<![a-z])python(?![a-z])"
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "pattern": "(?<![a-z])typescript(?![a-z])"
+    },
+    {
+      "id": "java",
+      "label": "Java",
+      "pattern": "(?<![a-z])java(?!script|[a-z])"
+    },
+    {
+      "id": "go",
+      "label": "Go",
+      "pattern": "(?<![a-z])(?:golang|go)(?![a-z])"
+    },
+    {
+      "id": "rust",
+      "label": "Rust",
+      "pattern": "(?<![a-z])rust(?![a-z])"
+    },
+    {
+      "id": "langchain",
+      "label": "LangChain",
+      "pattern": "langchain"
+    },
+    {
+      "id": "langgraph",
+      "label": "LangGraph",
+      "pattern": "langgraph"
+    },
+    {
+      "id": "llamaindex",
+      "label": "LlamaIndex",
+      "pattern": "llamaindex"
+    },
+    {
+      "id": "autogen",
+      "label": "AutoGen",
+      "pattern": "autogen"
+    },
+    {
+      "id": "dify",
+      "label": "Dify",
+      "pattern": "(?<![a-z])dify(?![a-z])"
+    },
+    {
+      "id": "coze",
+      "label": "Coze",
+      "pattern": "(?<![a-z])coze(?![a-z])|扣子"
+    },
+    {
+      "id": "mcp",
+      "label": "MCP",
+      "pattern": "(?<![a-z])mcp(?![a-z])|model context protocol"
+    },
+    {
+      "id": "a2a",
+      "label": "A2A",
+      "pattern": "(?<![a-z])a2a(?![a-z])|agent.to.agent"
+    },
+    {
+      "id": "rag",
+      "label": "RAG / 检索增强",
+      "pattern": "(?<![a-z])(?:graph)?rag(?![a-z])|检索增强"
+    },
+    {
+      "id": "tool_calling",
+      "label": "工具调用",
+      "pattern": "tool[ -]?(?:use|call(?:ing)?)|function[ -]?call(?:ing)?|工具调用|工具使用"
+    },
+    {
+      "id": "memory",
+      "label": "Agent 记忆",
+      "pattern": "(?<![a-z])memory(?![a-z])|记忆机制|记忆系统|长期记忆|记忆管理"
+    },
+    {
+      "id": "planning",
+      "label": "任务规划",
+      "pattern": "plan.and.execute|任务规划|任务拆解|任务分解|规划与反思|多轮决策"
+    },
+    {
+      "id": "multi_agent",
+      "label": "多智能体协作",
+      "pattern": "multi[ -]?agents?|多[ -]?agent|多智能体"
+    },
+    {
+      "id": "harness",
+      "label": "Agent Harness",
+      "pattern": "harness"
+    },
+    {
+      "id": "context",
+      "label": "上下文工程",
+      "pattern": "context engineering|上下文工程|上下文管理|compaction"
+    },
+    {
+      "id": "evaluation",
+      "label": "评测",
+      "pattern": "evaluation|评测|评估体系|(?<![a-z])eval(?![a-z])"
+    },
+    {
+      "id": "security",
+      "label": "Agent 安全 / 沙箱",
+      "pattern": "沙箱|sandbox|prompt injection|提示(?:词)?注入|智能体安全|agent安全|agent security|guardrails?"
+    },
+    {
+      "id": "prompt",
+      "label": "提示工程",
+      "pattern": "prompt|提示词|提示工程"
+    },
+    {
+      "id": "finetuning",
+      "label": "微调 / 对齐",
+      "pattern": "fine.?tun|微调|lora|rlhf|dpo"
+    },
+    {
+      "id": "reinforcement",
+      "label": "强化学习",
+      "pattern": "强化学习|reinforcement learning"
+    },
+    {
+      "id": "pytorch",
+      "label": "PyTorch",
+      "pattern": "pytorch"
+    },
+    {
+      "id": "vllm",
+      "label": "vLLM",
+      "pattern": "vllm"
+    },
+    {
+      "id": "vector_db",
+      "label": "向量数据库",
+      "pattern": "向量数据库|milvus|weaviate|faiss"
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "pattern": "docker"
+    },
+    {
+      "id": "kubernetes",
+      "label": "Kubernetes",
+      "pattern": "kubernetes|(?<![a-z])k8s(?![a-z])"
+    },
+    {
+      "id": "ai_coding",
+      "label": "AI 编程工具",
+      "pattern": "claude code|cursor|codex|copilot|vibe coding|AI辅助编程|AI编程"
+    },
+    {
+      "id": "openclaw",
+      "label": "OpenClaw",
+      "pattern": "openclaw"
+    }
+  ]
+}

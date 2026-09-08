@@ -33,6 +33,11 @@ jobs:
         run: npm run check
       - name: Build static pages and search index
         run: npm run build
+      - name: Test employment pipeline offline
+        run: |
+          python3 -m venv .private/job-market/venv
+          .private/job-market/venv/bin/python -m pip install -r tools/job_market/requirements.txt
+          .private/job-market/venv/bin/python -m unittest discover -s tools/job_market/tests -v
       - name: Verify DCO sign-off
         if: github.event_name == 'pull_request'
         env:
