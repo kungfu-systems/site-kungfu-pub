@@ -1,0 +1,236 @@
+---
+import Base from '../../../layouts/Base.astro';
+import CompetitorWorkbook from '../../../components/CompetitorWorkbook';
+import { ArrowUpRight, ArrowRight, Download, FileText, Check, Compass } from 'lucide-react';
+import { course, jobs, sources, steps } from '../../../data/competitor-watch';
+import '../../../styles/competitor-watch.css';
+---
+
+<Base
+  title="不会编程，也能开始的第一份 Agent 作品"
+  description="从真实产品岗位出发，跟着6张练习资料卡，用Agent完成竞品观察、核查与业务建议，留下自己的第一份作品。"
+  section="roadmaps"
+>
+  <div class="container cw-page">
+    <nav class="cw-breadcrumb" aria-label="面包屑">
+      <a href="/roadmaps/">学习路线</a><span>/</span><span>业务与产品起点 · 第一个作品</span>
+    </nav>
+    <section class="cw-hero">
+      <div>
+        <div class="eyebrow">
+          <span class="short-line"></span> 商科 / 文科 / 对产品与业务感兴趣的你
+        </div>
+        <h1>让你的业务理解，<br />变成一份<span>看得见的作品。</span></h1>
+        <p class="cw-lead">
+          用 Agent 做一份竞品观察简报。<br />从读懂资料，到提出建议，再到讲清自己的贡献。
+        </p>
+        <div class="cw-badges">
+          <span><Check size={14} />不要求编程</span><span><Check size={14} />资料已备好</span><span
+            ><Check size={14} />无需 GitHub</span>
+        </div>
+        <div class="cw-buttons">
+          <a class="button primary" href="#workshop">开始我的第一个作品<ArrowRight size={18} /></a
+          ><a class="text-link" href="/practice/competitor-watch/example/"
+            >先看看成品<ArrowUpRight size={17} /></a>
+        </div>
+        <p class="cw-small">
+          课程与材料开放阅读 · 建议预留 1–2 小时，可分次完成<br />AI
+          工具另行使用；有账号和额度即可开始，不必为这次练习购买插件。
+        </p>
+      </div>
+      <a
+        class="cw-paper"
+        href="/practice/competitor-watch/example/"
+        aria-label="打开竞品观察简报参考成品"
+      >
+        <div class="cw-paper-top">
+          <span>你将做出的东西</span><span class="cw-stamp">教学示例</span>
+        </div>
+        <span class="cw-paper-date">纸舟产品组 · 模拟业务场景</span><h2>本周竞品观察</h2><p
+          class="cw-paper-sub"
+        >
+          要不要降价、跟进 AI 标签？
+        </p>
+        <div class="cw-paper-fact">
+          <span>01</span><div><b>先把事实弄清楚</b><p>19 元是首月优惠，不是常规价。</p></div><i
+            >[S1]</i>
+        </div>
+        <div class="cw-paper-fact">
+          <span>02</span><div><b>留住你的判断</b><p>功能在候补，不代表已经上线。</p></div><i
+            >[S4]</i>
+        </div>
+        <div class="cw-paper-verdict">
+          <span>我的建议</span><p>本周先验证用户的分享需求，暂不根据预告调整价格和排期。</p>
+        </div>
+        <div class="cw-paper-bottom">
+          <span>一页简报 + 来源记录 + 个人复盘</span><ArrowUpRight size={20} />
+        </div>
+      </a>
+    </section>
+    <nav class="cw-anchor-nav" aria-label="本页内容">
+      <a href="#opportunities">真实岗位</a><a href="#materials">练习资料</a><a href="#workshop"
+        >动手完成</a
+      ><a href="#next">作品与求职</a>
+    </nav>
+
+    <section class="cw-section" id="opportunities">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">先看机会，再决定学什么</span><h2>企业已经在找这样的人。</h2>
+        </div><a class="text-link" href="/careers/">更多招聘入口<ArrowUpRight size={16} /></a>
+      </div>
+      <p class="cw-section-intro">
+        业务理解、表达和调研能力可以继续用。新的练习，是让 Agent
+        帮你处理资料，再由你核对、判断和交付。
+      </p>
+      <div class="cw-job-grid">
+        {
+          jobs.map((job) => (
+            <article class="cw-job">
+              <>
+                <span class="cw-label">
+                  {job.company} · {job.tag}
+                </span>
+                <h3>{job.title}</h3>
+                <p>{job.signal}</p>
+                <div class="cw-job-connection">
+                  <>
+                    <b>这次能练到</b>
+                    <p>{job.connection}</p>
+                  </>
+                </div>
+                <details>
+                  <>
+                    <summary>查看岗位门槛</summary>
+                    <p>{job.boundary}</p>
+                  </>
+                </details>
+                <a class="text-link" href={job.url} target="_blank" rel="noopener noreferrer">
+                  查看真实招聘 {job.id}
+                  <ArrowUpRight size={15} />
+                </a>
+                <small>原页发布日期：{job.published}</small>
+              </>
+            </article>
+          ))
+        }
+      </div>
+      <p class="cw-small">
+        招聘内容采集于 {
+          course.reviewedAt
+        }，以原页最新状态为准。这些是能力参考；完成本练习只覆盖岗位要求的一部分。
+      </p>
+    </section>
+
+    <section class="cw-section" id="materials">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">任务包 01 / 竞品观察</span><h2>不用先搜资料。先把一件事做完。</h2>
+        </div><a
+          class="button secondary"
+          href="/practice/competitor-watch/download/materials.txt"
+          download><Download size={16} />下载6张资料卡</a>
+      </div>
+      <div class="cw-assignment">
+        <Compass size={28} /><div>
+          <b>来自负责人的任务</b><p>{course.scenario}</p><span
+            >交付：一页简报，说明事实、依据、建议与下一步。练习观察日：2026-09-08。</span>
+        </div>
+      </div>
+      <p class="cw-simulation">练习说明：{course.boundary}</p>
+      <div class="cw-source-grid">
+        {
+          sources.map((s) => (
+            <details class="cw-source" id={`source-${s.id}`}>
+              <>
+                <summary>
+                  <>
+                    <span class="cw-source-id">{s.id}</span>
+                    <span>
+                      <>
+                        <b>
+                          {s.product} · {s.title}
+                        </b>
+                        <small>
+                          {s.kind} · {s.date}
+                        </small>
+                      </>
+                    </span>
+                    <span class="cw-source-toggle">展开</span>
+                  </>
+                </summary>
+                <p>{s.text}</p>
+              </>
+            </details>
+          ))
+        }
+      </div>
+      <div class="cw-material-links">
+        <a href="/practice/competitor-watch/download/prompts.txt" download
+          ><FileText size={16} />下载分步操作卡</a
+        ><a href="/practice/competitor-watch/download/template.txt" download
+          ><FileText size={16} />下载空白作品模板</a
+        ><a href="/practice/competitor-watch/example/"
+          >打开完整参考成品<ArrowUpRight size={16} /></a>
+      </div>
+    </section>
+
+    <section class="cw-section" id="workshop">
+      <div class="cw-before-start">
+        <h2>你来定问题、做判断，Agent 帮你整理和起草。</h2><p>
+          不是看完就算学会。每一步都留下输出，最后能解释一处纠错、一个建议和一个还没验证的问题。
+        </p><ol>
+          {
+            steps.map((s) => (
+              <li>
+                <>
+                  <b>{s.name}</b>
+                  <span>{s.minutes}</span>
+                </>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+      <CompetitorWorkbook client:load />
+      <noscript
+        ><p class="cw-callout">
+          交互练习需要启用
+          JavaScript。你也可以下载上面的操作卡、资料与空白模板，在文档软件中完成同一练习。
+        </p></noscript
+      >
+    </section>
+
+    <section class="cw-section" id="next">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">做完之后，怎样继续</span><h2>让作品讲清楚：你解决了什么。</h2>
+        </div>
+      </div><div class="cw-next-grid">
+        <article>
+          <span class="cw-next-number">01</span><h3>请一个人读你的简报</h3><p>
+            找同学、老师或有业务经验的人看：他能否说清你的建议？能否找到对应证据？是否知道下一步该做什么？记录一次真实反馈，再改一版。
+          </p>
+        </article>
+        <article>
+          <span class="cw-next-number">02</span><h3>在面试中讲一次取舍</h3><p>
+            “我用 Agent
+            整理材料，但发现了……我根据……修正了它，最后建议……仍需验证……”用实际经历填空，标题明确写“模拟项目”，不要写成实习业绩。
+          </p>
+        </article>
+        <article>
+          <span class="cw-next-number">03</span><h3>再做一次真实观察</h3><p>
+            选择自己熟悉的领域，保存3个产品的公开页面、链接和日期，用同一流程更新一周。产品方向下一步补交互原型；运营方向补一次真实流程试用与反馈。
+          </p>
+        </article>
+      </div><div class="cw-closing">
+        <div>
+          <h3>你已经有的专业理解，是这条路的起点。</h3><p>
+            这节课练资料处理、任务表达和业务判断。接下来用真实项目积累作品，再按具体招聘要求补齐能力。
+          </p>
+        </div><a href="/roadmaps/foundation/" class="button secondary"
+          >继续了解 Agent<ArrowRight size={16} /></a>
+      </div>
+    </section>
+  </div>
+</Base>

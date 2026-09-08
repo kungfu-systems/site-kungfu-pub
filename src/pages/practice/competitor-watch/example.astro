@@ -1,0 +1,73 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { ArrowLeft, ArrowRight, Download } from 'lucide-react';
+import { course, example, fields, sources } from '../../../data/competitor-watch';
+import '../../../styles/competitor-watch.css';
+---
+
+<Base title="竞品观察简报 · 完整参考成品" section="roadmaps">
+  <div class="container cw-example-page">
+    <a class="text-link" href="/practice/competitor-watch/"><ArrowLeft size={16} />回到练习</a><div
+      class="cw-example-heading"
+    >
+      <div>
+        <span class="eyebrow">参考成品 · 帮你理解交付标准</span><h1>本周竞品观察简报</h1><p>
+          纸舟产品组 · 练习观察日 2026-09-08
+        </p>
+      </div><a
+        class="button secondary"
+        href="/practice/competitor-watch/download/example.txt"
+        download><Download size={16} />下载完整示例</a>
+    </div>
+    <p class="cw-simulation">
+      {course.boundary}以下为编写的参考答案，含示范核查记录，不是实际模型运行日志或学员作品。
+    </p>
+    <article class="cw-full-example">
+      {
+        fields.map((field) => (
+          <section>
+            <h2>{field.label}</h2>
+            {example[field.id].split('\n').map((line) => (
+              <p>{line}</p>
+            ))}
+          </section>
+        ))
+      }
+    </article>
+    <section class="cw-section">
+      <h2>逐项对照资料</h2><div class="cw-source-grid">
+        {
+          sources.map((s) => (
+            <details class="cw-source">
+              <>
+                <summary>
+                  <>
+                    <span class="cw-source-id">{s.id}</span>
+                    <span>
+                      <>
+                        <b>
+                          {s.product} · {s.title}
+                        </b>
+                        <small>
+                          {s.kind} · {s.date}
+                        </small>
+                      </>
+                    </span>
+                  </>
+                </summary>
+                <p>{s.text}</p>
+                <p class="cw-correct">核查提示：{s.takeaway}</p>
+              </>
+            </details>
+          ))
+        }
+      </div>
+    </section>
+    <div class="cw-closing">
+      <div>
+        <h2>建议可以不同，依据要说得清楚。</h2><p>现在试着独立写一版，尤其保留自己的核查和取舍。</p>
+      </div><a class="button primary" href="/practice/competitor-watch/#workshop"
+        >回去做我的作品<ArrowRight size={16} /></a>
+    </div>
+  </div>
+</Base>

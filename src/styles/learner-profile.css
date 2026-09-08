@@ -1,0 +1,293 @@
+.identity-strip {
+  border-bottom: 1px solid var(--line);
+  background: #efeee4;
+  position: relative;
+  z-index: 20;
+}
+.identity-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-block: 10px;
+  font-size: 12px;
+  flex-wrap: wrap;
+}
+.identity-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ink);
+  font-weight: 600;
+}
+.identity-control select {
+  max-width: 100%;
+  background: var(--paper);
+  border: 1px solid #c7caba;
+  padding: 7px 28px 7px 10px;
+  border-radius: 4px;
+  color: var(--ink);
+}
+.identity-note {
+  color: var(--muted);
+}
+.identity-error {
+  color: var(--accent);
+}
+.profile-description {
+  margin-top: 12px;
+  color: var(--muted);
+}
+.profile-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0 24px;
+}
+.profile-tabs button {
+  border: 1px solid var(--line);
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 24px;
+}
+.profile-tabs button[aria-pressed='true'] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.practice-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.practice-entry {
+  border: 1px solid var(--line);
+  padding: 28px;
+  border-radius: 7px;
+  background: #f1efe5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+.practice-entry.entry-developer {
+  background: #eaf0e7;
+}
+.practice-entry.entry-practitioner {
+  background: #eeece4;
+}
+.practice-entry .card-top {
+  width: 100%;
+  margin-bottom: 28px;
+}
+.practice-entry h3 {
+  font: 600 25px/1.45 var(--serif);
+  margin: 10px 0 14px;
+}
+.practice-entry p {
+  color: #686c60;
+  flex: 1;
+}
+.practice-result {
+  font-size: 12px;
+  margin: 22px 0 18px;
+  line-height: 1.8;
+}
+.practice-theory {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 16px;
+}
+.practice-entry-grid.single {
+  grid-template-columns: 1fr;
+}
+.single .practice-entry {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 30px;
+}
+.single .card-top {
+  display: none;
+}
+.single .card-kicker,
+.single h3,
+.single p,
+.single .practice-result {
+  grid-column: 1;
+}
+.single .button {
+  grid-column: 2;
+  grid-row: 2/4;
+  align-self: center;
+}
+.single .practice-theory {
+  grid-column: 2;
+  grid-row: 4;
+  align-self: center;
+}
+.profile-all {
+  background: none;
+  border: 0;
+  font-size: 13px;
+  white-space: nowrap;
+}
+.profile-career {
+  padding: 30px;
+  background: #eaf0e7;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  margin: 0 0 32px;
+}
+.profile-career h2 {
+  font: 600 27px/1.5 var(--serif);
+  margin: 12px 0;
+}
+.profile-career p {
+  max-width: 850px;
+  margin-bottom: 16px;
+}
+.profile-filter-note {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 22px 0;
+}
+.profile-filter-note button {
+  background: none;
+  border: 0;
+  padding: 6px;
+}
+.profile-filter-note label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.practice-discovery {
+  margin: 32px 0 44px;
+}
+.practice-discovery .section-heading {
+  align-items: center;
+  gap: 20px;
+}
+.hero-description {
+  white-space: pre-line;
+}
+.ap-material {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 13px/1.8 var(--sans);
+  max-height: 420px;
+  overflow: auto;
+  background: #eeeee5;
+  padding: 20px;
+  border-radius: 5px;
+}
+.ap-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+.ap-steps li {
+  list-style: none;
+  padding: 16px;
+  background: #efeee5;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+.ap-steps {
+  padding: 0;
+}
+.ap-steps small {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+.ap-example {
+  white-space: pre-wrap;
+  line-height: 1.9;
+  font-family: var(--sans);
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: #faf9f4;
+  border-radius: 6px;
+}
+.ap-downloads {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+.ap-downloads a {
+  font-size: 13px;
+}
+.ap-course .cw-section {
+  margin-top: 46px;
+}
+.ap-course .cw-hero h1 {
+  font-size: clamp(30px, 4.4vw, 54px);
+}
+@media (max-width: 900px) {
+  .practice-entry-grid {
+    grid-template-columns: 1fr;
+  }
+  .practice-entry {
+    padding: 25px;
+  }
+  .ap-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+  .single .practice-entry {
+    display: flex;
+  }
+  .identity-note {
+    font-size: 11px;
+  }
+  .practice-discovery .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .identity-inner {
+    gap: 6px;
+    padding-block: 8px;
+  }
+  .identity-control {
+    width: 100%;
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .identity-control select {
+    max-width: 75%;
+    font-size: 12px;
+  }
+  .identity-note {
+    line-height: 1.6;
+  }
+  .ap-steps {
+    grid-template-columns: 1fr;
+  }
+  .profile-career {
+    padding: 22px;
+  }
+  .profile-tabs {
+    gap: 8px;
+  }
+  .profile-tabs button {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+  .ap-material {
+    padding: 14px;
+  }
+  .practice-entry h3 {
+    font-size: 25px;
+  }
+  .ap-example {
+    padding: 18px;
+    overflow-wrap: anywhere;
+  }
+}

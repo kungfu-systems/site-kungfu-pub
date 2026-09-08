@@ -1,0 +1,113 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { advancedPractices } from '../../../data/advanced-practices';
+import PracticeWorkbook from '../../../components/PracticeWorkbook';
+import '../../../styles/competitor-watch.css';
+export function getStaticPaths() {
+  return advancedPractices.map((course) => ({ params: { id: course.id }, props: { course } }));
+}
+const { course } = Astro.props;
+---
+
+<Base title={course.title} description={course.intro} section="roadmaps">
+  <div class="container cw-page ap-course">
+    <nav class="cw-breadcrumb" aria-label="面包屑">
+      <a href="/roadmaps/">学习路线</a><span>/</span><span>{course.audience}</span>
+    </nav>
+    <section class="cw-hero">
+      <div>
+        <span class="eyebrow">{course.audience} / 完整作品实践</span><h1>{course.title}</h1><p>
+          {course.intro}
+        </p><div class="hero-buttons">
+          <a class="button primary" href="#workbook">开始动手 →</a><a
+            class="text-link"
+            href={`/practice/${course.id}/example/`}>先看参考成品 ↗</a>
+        </div>
+      </div><aside class="profile-career">
+        <span class="eyebrow">这次带走什么</span><h2>{course.result}</h2><p>
+          {course.prerequisites}
+        </p><small>可分次完成，进度保存在当前浏览器。无需 GitHub 账号。</small>
+      </aside>
+    </section>
+    <section class="cw-section" id="jobs">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">A REAL JOB / 看见工作的要求</span><h2>
+            这件事，和工作有什么关系？
+          </h2>
+        </div>
+      </div><article class="profile-career">
+        <h3>{course.job.title}</h3><p>{course.job.signal}</p><p>{course.job.connection}</p><p>
+          <b>还需要：</b>{course.job.boundary}
+        </p><a class="text-link" href={course.job.url} target="_blank" rel="noopener noreferrer"
+          >查看招聘原文 ↗</a
+        ><p class="storage-note">
+          发布于 {course.job.published} · 核对日期 2026-09-08；这是岗位要求案例，在招状态以原站为准。
+        </p>
+      </article>
+    </section>
+    <section class="cw-section" id="materials">
+      <span class="eyebrow">MATERIALS / 材料已备好</span><h2>先读任务，再打开工具。</h2><p>
+        下面的产品、岗位数据与案例均为教学模拟材料；招聘案例另有真实来源。
+      </p><pre class="ap-material">{course.materials}</pre><div class="ap-downloads">
+        {
+          course.downloads.map((d) => (
+            <a
+              class="button secondary"
+              href={`/practice/${course.id}/download/${d.name}`}
+              download={d.name}
+            >
+              ↓ {d.label}
+            </a>
+          ))
+        }
+      </div><p class="storage-note">
+        资料可直接复制。下载后用文本编辑器打开；Python
+        练习的四个任务文件放在同一个练习目录。参考文件请单独保存，完成后再对照。
+      </p>
+    </section>
+    <section class="cw-section">
+      <span class="eyebrow">THE PATH / 五步完成</span><h2>从定义任务，到交出作品。</h2><ol
+        class="ap-steps"
+      >
+        {
+          course.steps.map((s, i) => (
+            <li>
+              <>
+                <small>
+                  0{i + 1} / {s.name}
+                </small>
+                <b>{s.title}</b>
+              </>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+    <section class="cw-section" id="workbook">
+      <PracticeWorkbook client:load course={course} /><noscript
+        ><p>互动练习需要启用 JavaScript。你仍可阅读任务、下载资料并查看参考成品。</p></noscript>
+    </section>
+    <section class="cw-section">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">WHAT COMES NEXT / 完成以后</span><h2>用作品，开始下一次交流。</h2>
+        </div>
+      </div><div class="three-notes">
+        {
+          course.next.map((n) => (
+            <div>
+              <>
+                <h3>{n.title}</h3>
+                <p>{n.text}</p>
+                <a class="text-link" href={n.href}>
+                  继续这一步 →
+                </a>
+              </>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </div></Base
+>

@@ -1,8 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { ArrowUpRight, Compass, Code2, Layers } from 'lucide-react';
-import catalog from '../../data/catalog.json';
-const icons = [Compass, Code2, Layers];
+import PracticeDiscovery from '../../components/PracticeDiscovery';
+import '../../styles/competitor-watch.css';
 ---
 
 <Base title="学习路线" section="roadmaps"
@@ -12,38 +11,7 @@ const icons = [Compass, Code2, Layers];
         按你的基础与目标选择路线。每个节点都有学习材料和完成标准，<br
         />你可以按顺序探索，也可以从已经遇到的问题出发。
       </p>
-    </div><div class="roadmap-cards">
-      {
-        catalog.roadmaps.map((r, i) => {
-          const Icon = icons[i];
-          return (
-            <a class={`roadmap-card roadmap-card-${i}`} href={`/roadmaps/${r.id}/`}>
-              <>
-                <div class="card-top">
-                  <>
-                    <Icon size={27} />
-                    <span class="card-number">{r.number}</span>
-                  </>
-                </div>
-                <div class="card-kicker">{r.subtitle}</div>
-                <h3>{r.title}</h3>
-                <p>{r.description}</p>
-                <div class="card-bottom">
-                  <>
-                    <span>
-                      {r.level}
-                      <i />
-                      {r.duration}
-                    </span>
-                    <ArrowUpRight size={18} />
-                  </>
-                </div>
-              </>
-            </a>
-          );
-        })
-      }
-    </div><section class="note-panel">
+    </div><PracticeDiscovery client:load /><section class="note-panel">
       <h2>怎样使用一条路线？</h2><div class="three-notes">
         <div>
           <b>01 · 先看目标</b><p>阅读每个节点的完成标准，确认它与你想解决的问题有关。</p>
