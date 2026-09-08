@@ -69,7 +69,7 @@ export default function SiteSearch() {
         {hits.map((hit, i) => (
           <a key={`${hit.url}-${i}`} href={hit.url}>
             <div>
-              <h2>{hit.meta.title?.replace(' — 功夫 Pub', '')}</h2>
+              <h2>{hit.meta.title?.replace(' — 功夫酒馆', '')}</h2>
               <p>{hit.excerpt.replace(/<[^>]*>/g, '')}</p>
             </div>
             <ArrowUpRight size={21} />
