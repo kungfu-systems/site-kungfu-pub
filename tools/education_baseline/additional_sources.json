@@ -1,0 +1,34 @@
+[
+  {
+    "id": "VSTD2025",
+    "title": "人工智能技术应用（510209）高职专科专业教学标准",
+    "publisher": "教育部",
+    "year": 2025,
+    "type": "national_teaching_standard",
+    "url": "https://www.moe.gov.cn/s78/A07/zcs_ztzl/2017_zt06/17zt06_bznr/bznr_zyjyzyjxbz/gdzyjy_zk/zk_dzyxxdl/dzxxdl_jsjl/202502/P020250207532415004946.pdf"
+  },
+  {
+    "id": "VINTRO2022",
+    "title": "人工智能工程技术（310209）职业本科专业简介",
+    "publisher": "教育部",
+    "year": 2022,
+    "type": "national_program_intro",
+    "url": "https://www.moe.gov.cn/s78/A07/zcs_ztzl/2017_zt06/17zt06_bznr/bznr_zdzyxxzyml/gaozhiben/dianzi/202209/P020220905578128684985.pdf"
+  },
+  {
+    "id": "OUTCOME2024",
+    "title": "2024届毕业生就业质量年度报告",
+    "publisher": "苏州工业职业技术学院",
+    "year": 2024,
+    "type": "graduate_outcome_report",
+    "url": "https://www.siit.edu.cn/_upload/article/files/32/16/f58315f8470b906949dbb2af012e/fef47e51-f535-4e78-924a-6a314591c5be.pdf"
+  },
+  {
+    "id": "SZTU2025",
+    "title": "深圳技术大学2025年本科招生计划",
+    "publisher": "深圳技术大学",
+    "year": 2025,
+    "type": "school_admissions_plan",
+    "url": "https://zs.sztu.edu.cn/info/1011/4436.htm"
+  }
+]
