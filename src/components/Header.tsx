@@ -12,11 +12,9 @@ export default function Header({ section }: { section: string }) {
   return (
     <header className="site-header" data-pagefind-ignore>
       <div className="header-inner container">
-        <a href="/" className="brand" aria-label="功夫 Pub 首页">
+        <a href="/" className="brand" aria-label="功夫酒馆 首页">
           <span className="brand-seal">功</span>
-          <span>
-            功夫 <b>Pub.</b>
-          </span>
+          <span>功夫酒馆</span>
         </a>
         <nav className={open ? 'main-nav is-open' : 'main-nav'} aria-label="主导航">
           {links.map(([key, label, url]) => (
