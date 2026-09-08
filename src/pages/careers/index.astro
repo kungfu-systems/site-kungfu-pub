@@ -1,7 +1,10 @@
 ---
+import PracticeDiscovery from '../../components/PracticeDiscovery';
+import { ProfileCareer } from '../../components/ProfileContent';
 import Base from '../../layouts/Base.astro';
 import { ArrowUpRight, Download, ScanLine, ListFilter, ChartNoAxesCombined } from 'lucide-react';
 import catalog from '../../data/catalog.json';
+import '../../styles/competitor-watch.css';
 ---
 
 <Base title="职业雷达" section="careers"
@@ -11,7 +14,9 @@ import catalog from '../../data/catalog.json';
         从公开招聘信息出发，理解岗位在做什么、需要什么能力。<br
         />观察长期变化，为自己的学习与实践找到参照。
       </p>
-    </div><div class="career-status">
+    </div><ProfileCareer client:load /><PracticeDiscovery client:load compact /><div
+      class="career-status"
+    >
       <span class="status-dot"></span><b>观察计划 · 样本建设中</b><p>
         首期开放官方招聘入口与采样方法。连续样本建立后，再提供趋势统计。
       </p>
@@ -46,7 +51,8 @@ import catalog from '../../data/catalog.json';
             有样本，才有可以讨论的变化。
           </h2>
         </div><a href="/hiring-observation-template.csv" download class="button secondary"
-          ><Download size={16} /> 下载采样模板</a>
+          ><Download size={16} /> 下载采样模板</a
+        >
       </div><div class="three-notes">
         <div>
           <ScanLine size={24} /><b>01 · 保留来源</b><p>
@@ -68,7 +74,8 @@ import catalog from '../../data/catalog.json';
           看到“工具调用与评估经验”，可以先练习工具边界、测试样例与结果验证。
         </p>
       </div><a href="/roadmaps/builder/" class="button primary"
-        >进入构建者路线 <ArrowUpRight size={18} /></a>
+        >进入构建者路线 <ArrowUpRight size={18} /></a
+      >
     </section>
   </div></Base
 >

@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { Search, ArrowUpRight, Bookmark, SlidersHorizontal } from 'lucide-react';
+import { useLearnerProfile } from '../lib/learner-profile';
 import catalog from '../data/catalog.json';
 import { readIds, writeIds } from '../lib/storage';
 export default function ResourceLibrary() {
+  const { profile } = useLearnerProfile();
+  const [allProfiles, setAllProfiles] = useState(false);
   const [query, setQuery] = useState('');
   const [type, setType] = useState('全部资料');
   const [language, setLanguage] = useState('全部语言');
@@ -12,6 +15,7 @@ export default function ResourceLibrary() {
   useEffect(() => setSaved(readIds('bookmarks')), []);
   const items = catalog.resources.filter(
     (r) =>
+      (allProfiles || (profile.resourceIds as readonly string[]).includes(r.id)) &&
       (type === '全部资料' || r.type === type) &&
       (language === '全部语言' || r.language === language) &&
       (!savedOnly || saved.includes(r.id)) &&
@@ -31,6 +35,17 @@ export default function ResourceLibrary() {
   }
   return (
     <>
+      <div className="profile-filter-note">
+        <span>{profile.short} · 优先显示适合当前起点的资料</span>
+        <label>
+          <input
+            type="checkbox"
+            checked={allProfiles}
+            onChange={(e) => setAllProfiles(e.target.checked)}
+          />
+          查看全部身份的资料
+        </label>
+      </div>
       <div className="library-toolbar">
         <label className="input-search">
           <Search size={18} />
@@ -119,6 +134,7 @@ export default function ResourceLibrary() {
           <button
             className="button secondary"
             onClick={() => {
+              setAllProfiles(true);
               setQuery('');
               setType('全部资料');
               setLanguage('全部语言');

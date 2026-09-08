@@ -1,0 +1,33 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { advancedPractices } from '../../../data/advanced-practices';
+import '../../../styles/competitor-watch.css';
+export function getStaticPaths() {
+  return advancedPractices.map((course) => ({ params: { id: course.id }, props: { course } }));
+}
+const { course } = Astro.props;
+---
+
+<Base title={`${course.title} · 参考成品`} section="roadmaps"
+  ><div class="container cw-page">
+    <a class="breadcrumb" href={`/practice/${course.id}/`}>← 返回练习</a><div class="page-heading">
+      <span class="eyebrow">WORKED EXAMPLE / 功夫原创教学参考</span><h1>
+        先看看，完成后的样子。
+      </h1><p>{course.result} 以下为教学参考；请将自己的运行证据写入作品，不直接照抄。</p>
+    </div><pre class="ap-example">{course.example}</pre><div class="ap-downloads">
+      {
+        course.downloads
+          .filter((d) => d.name.startsWith('reference'))
+          .map((d) => (
+            <a
+              class="button secondary"
+              href={`/practice/${course.id}/download/${d.name}`}
+              download={d.name}
+            >
+              下载{d.label} ↓
+            </a>
+          ))
+      }<a class="button primary" href={`/practice/${course.id}/#workbook`}>回去做自己的作品 →</a>
+    </div>
+  </div></Base
+>
