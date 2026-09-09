@@ -11,27 +11,42 @@ export function getStaticPaths() {
 const { resource: r } = Astro.props;
 ---
 
-<Base title={r.title} description={r.description} section="resources"
-  ><div class="container article-container">
-    <a href="/resources/" class="breadcrumb">← 返回资料库</a><div class="page-heading compact">
-      <div class="eyebrow">CURATED RESOURCE / 外部精选</div><h1>{r.title}</h1><p>{r.description}</p>
-    </div><div class="article-metadata">
-      <span>{r.source}</span><span>{r.language} · {r.level}</span><span>核验日期 2026.09.07</span>
-    </div><div class="prose">
-      <h2>为什么收录</h2><p>
-        {
-          r.id === 'hf-agents'
-            ? '这份课程把基础概念、框架和项目实践放在连续的学习结构中，适合建立完整知识地图。建议先读概览，再选择一个单元动手。'
-            : r.id === 'qwen-agent'
-              ? '这份官方指南给出了具体框架的工具接入示例，适合已经了解 Agent 概念、希望进一步阅读代码的人。建议先理解输入输出，再研究配置。'
-              : '这份官方介绍提供理解工具连接协议的入口，适合建立宿主、客户端和服务端的概念关系。协议能力与具体产品实现需要分别核对。'
-        }
-      </p><h2>怎样开始</h2><p>
-        先写下你要回答的一个问题，再带着问题阅读原文。读完后，用一个自己的例子解释所学内容；涉及代码时，请以原站当前版本说明为准。
-      </p><h2>来源与边界</h2><p>
-        本站提供原创导读和原站指针。材料正文与更新由原作者维护；外部站点的网络可达性、语言覆盖与内容可能发生变化。
-      </p><p>来源：<a href={r.url} target="_blank" rel="noopener noreferrer">{r.source} ↗</a></p>
-    </div><a class="button primary" href={r.url} target="_blank" rel="noopener noreferrer"
-      >前往原始资料 <ArrowUpRight size={18} /></a>
-  </div></Base
->
+<Base title={r.title} description={r.description} section="resources">
+  <div class="container article-container">
+    <a href="/resources/" class="breadcrumb">← 返回资料库</a>
+    <div class="page-heading compact">
+      <div class="eyebrow">{r.category} / {r.type}</div><h1>{r.title}</h1><p>{r.description}</p>
+    </div>
+    <div class="article-metadata">
+      <span>{r.source}</span><span>{r.language} · {r.level}</span><span
+        >资料核对 <time datetime={r.checkedAt}>{r.checkedAt}</time></span>
+    </div>
+    <a class="button primary" href={r.url} target="_blank" rel="noopener noreferrer"
+      >打开原始资料 <ArrowUpRight size={18} /></a
+    >
+    <div class="prose">
+      <h2>适合谁，开始前需要什么</h2><p>{r.prerequisite}</p>
+      <h2>建议从哪里开始</h2><p>{r.start}</p>
+      <h2>可以尝试做出什么</h2><p>{r.outcome}</p><p>
+        这是酒馆建议的练习目标，不代表已完成课程，也不是就业承诺。
+      </p>
+      <h2>阅读、账号与费用</h2><p>{r.access}</p>
+      <h2>版本与核对说明</h2><p>{r.reviewNote}</p>
+      <h2>来源</h2><p>
+        <a href={r.url} target="_blank" rel="noopener noreferrer">{r.source} · 阅读入口 ↗</a>
+      </p>
+      {
+        r.sourceUrl !== r.url && (
+          <p>
+            <a href={r.sourceUrl} target="_blank" rel="noopener noreferrer">
+              作者项目仓库与目录 ↗
+            </a>
+          </p>
+        )
+      }
+      <p>
+        本站提供原创导读和来源指针，正文由原作者维护。核对限于公开介绍、目录或说明，不代表完成全部课程或实测所有示例。外站可达性、账号地区、语言覆盖与服务收费可能变化。
+      </p>
+    </div>
+  </div>
+</Base>

@@ -6,11 +6,13 @@ interface Props {
   title?: string;
   description?: string;
   section?: string;
+  home?: boolean;
 }
 const {
   title = '学会 Agent，看见下一步。',
   description = '功夫酒馆：面向中文读者的 Agent 学习路线、精选资料与行业观察。',
   section = 'home',
+  home = false,
 } = Astro.props;
 ---
 
@@ -29,9 +31,9 @@ const {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} — 功夫酒馆</title>
   </head>
-  <body>
+  <body class:list={{ 'home-page': home }}>
     <a href="#main" class="skip-link">跳到正文</a>
-    <Header client:load section={section} />
+    <Header client:load section={section} friendly={home} />
     <main id="main" data-pagefind-body><slot /></main>
     <footer class="site-footer container" data-pagefind-ignore>
       <div>

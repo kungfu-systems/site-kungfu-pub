@@ -1,0 +1,229 @@
+.resource-library {
+  --library-green: #24513f;
+}
+.library-orientation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  padding: 26px 30px;
+  background: #e8edde;
+  border-radius: 14px;
+  margin-top: 34px;
+}
+.library-orientation strong {
+  font-size: 19px;
+}
+.library-orientation p {
+  font-size: 13px;
+  margin: 7px 0 0;
+  color: #627054;
+}
+.library-orientation > span {
+  flex-shrink: 0;
+  font-size: 13px;
+  text-align: right;
+}
+.library-orientation b {
+  font-size: 27px;
+}
+.library-orientation small {
+  color: #627054;
+  font-size: 11px;
+}
+.library-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.library-categories button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #d7ddcb;
+  border-radius: 9px;
+  padding: 12px 16px;
+  background: #fafbf5;
+  font-size: 13px;
+  color: #4f6343;
+}
+.library-categories button[aria-pressed='true'] {
+  background: var(--library-green);
+  color: white;
+  border-color: var(--library-green);
+}
+.library-categories small {
+  font-size: 10px;
+  opacity: 0.8;
+}
+.resource-library .library-toolbar {
+  gap: 10px;
+}
+.resource-library .input-search {
+  min-width: 0;
+}
+.resource-library .language-select {
+  padding: 0 6px;
+}
+.library-shortcuts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin: -4px 0 22px;
+  color: #758167;
+}
+.library-shortcuts button {
+  font-size: 12px;
+  border: 1px solid #e0e5d6;
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: #4f6343;
+  background: #f7f9ef;
+}
+.library-filter-summary {
+  color: #657456;
+  font-size: 12px;
+}
+.library-filter-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.library-filter-actions > button:first-child {
+  background: none;
+  border: 0;
+  color: #657456;
+  font-size: 12px;
+  padding: 8px;
+}
+.resource-library .library-card {
+  border-radius: 13px;
+  min-width: 0;
+}
+.resource-library .library-card h2 {
+  font-family: var(--sans);
+  font-weight: 650;
+  font-size: 18px;
+}
+.resource-library .library-card > p {
+  line-height: 1.85;
+}
+.resource-library .library-card-top {
+  margin-bottom: 15px;
+}
+.library-card-flags {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.library-recommended {
+  font-size: 10px;
+  border-radius: 5px;
+  background: #e9eedb;
+  color: #4f6343;
+  padding: 5px 7px;
+}
+.library-prerequisite {
+  background: #f0f1e8;
+  padding: 12px 14px;
+  border-radius: 7px;
+  margin-top: 16px;
+}
+.library-prerequisite strong {
+  font-size: 11px;
+  color: #4d6143;
+}
+.library-prerequisite p {
+  font-size: 12px;
+  color: #68755c;
+  line-height: 1.8;
+  margin-top: 4px;
+}
+.library-card-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.library-card-links .library-card-link {
+  flex: 1;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: #3f634d;
+}
+.library-card-links > a:last-child {
+  font-size: 11px;
+  flex-shrink: 0;
+  color: #66735b;
+}
+.library-scope {
+  color: #7d8770;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-top: 32px;
+  max-width: 950px;
+}
+.resource-library .resource-mark.blue {
+  background: #e0e8f3;
+  color: #3b5c89;
+}
+.resource-library .resource-mark.green {
+  background: #deeadb;
+  color: #325b40;
+}
+.resource-library .resource-mark.orange {
+  background: #f4e3d2;
+  color: #935b2b;
+}
+.resource-library button {
+  cursor: pointer;
+}
+.resource-library :is(button, a, input, select):focus-visible {
+  outline: 2px solid #4f7150;
+  outline-offset: 3px;
+}
+@media (max-width: 760px) {
+  .library-orientation {
+    padding: 20px;
+    align-items: start;
+  }
+  .library-orientation strong {
+    font-size: 16px;
+  }
+  .library-orientation > span {
+    display: none;
+  }
+  .resource-library .library-toolbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .resource-library .input-search {
+    grid-column: 1 / -1;
+  }
+  .resource-library .language-select select {
+    width: 100%;
+  }
+  .library-categories {
+    gap: 6px;
+  }
+  .library-categories button {
+    padding: 10px;
+    font-size: 12px;
+    gap: 7px;
+  }
+  .resource-library .filter-row {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .resource-library .result-count {
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+}

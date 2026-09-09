@@ -1,0 +1,427 @@
+.computer-guide {
+  padding-block: 96px 30px;
+  scroll-margin-top: 100px;
+}
+.computer-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+.computer-heading .welcome-kicker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.computer-heading h2 {
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin: 15px 0 0;
+}
+.computer-heading p {
+  font-size: 15px;
+  line-height: 1.95;
+  color: #607268;
+  margin: 0;
+}
+.computer-heading a {
+  font-size: 13px;
+  color: #245340;
+  text-underline-offset: 4px;
+}
+.computer-budget-switch {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 8px;
+  background: #eaece3;
+  border-radius: 22px;
+}
+.computer-budget-switch button {
+  position: relative;
+  border: 1px solid transparent;
+  padding: 19px 38px 19px 24px;
+  border-radius: 15px;
+  background: transparent;
+  color: #425b4c;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  font: inherit;
+}
+.computer-budget-switch button[aria-pressed='true'] {
+  background: #254b3c;
+  color: #fff;
+  box-shadow: 0 5px 12px #183e3412;
+}
+.computer-budget-switch button:hover:not([aria-pressed='true']) {
+  background: #f8f9f3;
+}
+.computer-budget-switch button > span {
+  display: block;
+  font-size: 20px;
+  font-weight: 750;
+}
+.computer-budget-switch small {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+}
+.computer-budget-switch svg {
+  position: absolute;
+  right: 17px;
+  top: 24px;
+  color: #d7ed99;
+}
+.computer-selection-status {
+  margin: 13px 8px 18px;
+  color: #627368;
+  font-size: 12px;
+}
+.computer-result {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  border: 1px solid #dce1d4;
+  border-radius: 26px;
+  overflow: hidden;
+  animation: computer-appear 0.25s ease-out;
+}
+.computer-advice {
+  padding: 38px;
+  background: #eaf0db;
+}
+.computer-step {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #3d6247;
+}
+.computer-advice h3 {
+  text-wrap: balance;
+  font-size: 29px;
+  line-height: 1.45;
+  max-width: 310px;
+  margin: 25px 0 14px;
+  letter-spacing: -0.6px;
+}
+.computer-advice > p {
+  color: #53664f;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.computer-targets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 28px 0;
+}
+.computer-targets > div {
+  border-top: 1px solid #bfcdae;
+  padding-top: 14px;
+}
+.computer-targets span,
+.computer-targets strong,
+.computer-targets small {
+  display: block;
+}
+.computer-targets span {
+  font-size: 12px;
+}
+.computer-targets strong {
+  font-size: 27px;
+  letter-spacing: -0.8px;
+  margin: 8px 0;
+}
+.computer-targets small {
+  font-size: 11px;
+  color: #63745b;
+}
+.computer-advice .computer-focus {
+  padding: 15px 17px;
+  border-radius: 12px;
+  background: #f5f8ee;
+  font-size: 13px;
+}
+.computer-editorial {
+  display: block;
+  font-size: 11px;
+  color: #667459;
+  margin-top: 17px;
+}
+.computer-model {
+  background: #fffefa;
+  padding: 32px 36px 22px;
+  min-width: 0;
+}
+.computer-model-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: #778175;
+  font-size: 11px;
+}
+.computer-brand {
+  color: #234839;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.computer-model h3 {
+  margin: 20px 0 8px;
+  font-size: 23px;
+  line-height: 1.45;
+}
+.computer-model-reason {
+  color: #657163;
+  line-height: 1.8;
+  font-size: 13px;
+}
+.computer-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 7px 16px;
+  margin: 18px 0;
+}
+.computer-price strong {
+  font-size: 37px;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+.computer-price strong small {
+  font-size: 20px;
+  margin-right: 4px;
+}
+.computer-price > span {
+  font-size: 11px;
+  background: #f2eedd;
+  color: #6d6034;
+  padding: 5px 8px;
+  border-radius: 5px;
+}
+.computer-specs {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 15px;
+  padding: 18px 0;
+  margin: 0;
+  border-block: 1px solid #e7e8df;
+}
+.computer-specs dt {
+  font-size: 11px;
+  color: #758071;
+  margin-bottom: 4px;
+}
+.computer-specs dd {
+  margin: 0;
+  font-weight: 650;
+  font-size: 14px;
+}
+.computer-model-caution {
+  font-size: 12px;
+  color: #6f725d;
+  line-height: 1.75;
+  margin: 16px 0;
+}
+.computer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+.computer-actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  background: #254b3c;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+}
+.computer-actions a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #345b43;
+}
+.computer-source {
+  margin-top: 19px;
+  border-top: 1px solid #e7e8df;
+  padding-top: 14px;
+  font-size: 12px;
+  color: #64705f;
+}
+.computer-guide summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.computer-guide summary::-webkit-details-marker {
+  display: none;
+}
+.computer-guide summary svg {
+  flex-shrink: 0;
+  transition: transform 0.2s;
+}
+.computer-guide details[open] > summary svg {
+  transform: rotate(180deg);
+}
+.computer-source p {
+  line-height: 1.85;
+}
+.computer-source a,
+.computer-bottom a {
+  color: #345b43;
+  text-underline-offset: 3px;
+}
+.computer-copy-status {
+  min-height: 24px;
+  padding-top: 8px;
+  font-size: 12px;
+  color: #345b43;
+}
+.computer-copy-fallback {
+  margin-block: 12px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 12px;
+}
+.computer-copy-fallback pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.8;
+  user-select: text;
+}
+.computer-bottom {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: start;
+  gap: 30px;
+}
+.computer-bottom > p {
+  margin: 0;
+  color: #697364;
+  font-size: 12px;
+  line-height: 1.9;
+}
+.computer-bottom strong {
+  display: block;
+  color: #40583e;
+  margin-bottom: 3px;
+}
+.computer-bottom details {
+  padding: 16px 20px;
+  border: 1px solid #dce1d4;
+  border-radius: 12px;
+  scroll-margin-top: 100px;
+}
+.computer-bottom summary {
+  font-size: 13px;
+  font-weight: 650;
+}
+.computer-bottom details p {
+  color: #64705f;
+  line-height: 1.85;
+  font-size: 12px;
+}
+.computer-guide :is(button, a, summary):focus-visible {
+  outline: 3px solid #8264b3;
+  outline-offset: 4px;
+}
+@keyframes computer-appear {
+  from {
+    opacity: 0.65;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1000px) {
+  .computer-advice,
+  .computer-model {
+    padding: 26px;
+  }
+  .computer-budget-switch button > span {
+    font-size: 17px;
+  }
+}
+@media (max-width: 700px) {
+  .computer-guide {
+    padding-top: 64px;
+  }
+  .computer-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .computer-budget-switch {
+    gap: 4px;
+    padding: 5px;
+    border-radius: 14px;
+  }
+  .computer-budget-switch button {
+    padding: 15px 6px;
+    text-align: center;
+    border-radius: 10px;
+  }
+  .computer-budget-switch button > span {
+    font-size: 12px;
+  }
+  .computer-budget-switch small {
+    font-size: 10px;
+  }
+  .computer-budget-switch svg {
+    display: none;
+  }
+  .computer-result,
+  .computer-bottom {
+    grid-template-columns: 1fr;
+  }
+  .computer-result {
+    border-radius: 18px;
+  }
+  .computer-advice,
+  .computer-model {
+    padding: 24px;
+  }
+  .computer-advice h3 {
+    max-width: none;
+    font-size: 25px;
+    margin-top: 18px;
+  }
+  .computer-targets {
+    margin-block: 18px;
+  }
+  .computer-model h3 {
+    font-size: 21px;
+  }
+  .computer-bottom {
+    gap: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .computer-guide *,
+  .computer-result {
+    animation: none;
+    transition: none;
+  }
+}

@@ -1,19 +1,25 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ResourceLibrary from '../../components/ResourceLibrary';
+import '../../styles/resource-library.css';
 ---
 
 <Base title="精选资料库" section="resources"
   ><div class="container page-content">
     <div class="page-heading">
-      <span class="eyebrow">THE READING ROOM / 精选资料库</span><h1>值得花时间的，放在这里。</h1><p>
-        原创教程与外部资料互相补充。每份推荐都说明来源、适合谁以及为什么读，<br
-        />让搜寻少一点，让理解多一点。
+      <span class="eyebrow">THE READING ROOM / Agent 学习资料库</span><h1>
+        找到适合你的那一份。
+      </h1><p>
+        从第一次使用 Agent，到协作开发、系统课程和工程实践。<br
+        />先看你想做什么，再看需要哪些基础，不必每一门都学。<br
+        />有官方中文版的资料，优先直接打开中文。
       </p>
     </div><div class="original-banner">
-      <span>功夫原创 / 从实践中理解</span><a href="/tutorials/agent-basics/">认识 Agent →</a><a
-        href="/tutorials/define-a-task/">定义一个好任务 →</a
-      ><a href="/tutorials/tool-contract/">设计工具边界 →</a>
+      <span>功夫原创 / 先做一个作品</span><a href="/practice/competitor-watch/"
+        >零编程：做竞品简报 →</a
+      ><a href="/practice/agent-coding/">开发者：协作做工具 →</a><a
+        href="/practice/agent-evaluation/">进阶：检查 Agent 质量 →</a
+      >
     </div><ResourceLibrary client:load />
   </div></Base
 >

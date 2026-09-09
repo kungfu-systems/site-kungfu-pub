@@ -12,6 +12,28 @@ for (const key of ['resources', 'nodes', 'roadmaps', 'observations', 'careerSour
 for (const resource of [...catalog.resources, ...catalog.careerSources]) {
   assert.equal(new URL(resource.url).protocol, 'https:');
 }
+for (const resource of catalog.resources) {
+  for (const key of [
+    'title',
+    'source',
+    'description',
+    'category',
+    'type',
+    'language',
+    'level',
+    'prerequisite',
+    'start',
+    'outcome',
+    'access',
+    'reviewNote',
+  ]) {
+    assert.equal(typeof resource[key], 'string', `${resource.id}: missing ${key}`);
+    assert(resource[key].trim(), `${resource.id}: empty ${key}`);
+  }
+  assert.equal(new URL(resource.sourceUrl).protocol, 'https:');
+  assert(/^\d{4}-\d{2}-\d{2}$/.test(resource.checkedAt), `${resource.id}: invalid check date`);
+  assert(resource.checkedAt <= catalog.reviewedAt, `${resource.id}: inconsistent check date`);
+}
 for (const node of catalog.nodes) {
   for (const id of node.prerequisites)
     assert(nodeIds.has(id), `${node.id}: missing prerequisite ${id}`);

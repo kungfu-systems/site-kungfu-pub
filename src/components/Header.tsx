@@ -9,7 +9,13 @@ const links = [
   ['trends', '趋势观察', '/trends/'],
   ['careers', '职业雷达', '/careers/'],
 ];
-export default function Header({ section }: { section: string }) {
+export default function Header({
+  section,
+  friendly = false,
+}: {
+  section: string;
+  friendly?: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const { profile, persistent, ready, setProfile } = useLearnerProfile();
   return (
@@ -28,7 +34,15 @@ export default function Header({ section }: { section: string }) {
                 className={section === key ? 'active' : ''}
                 aria-current={section === key ? 'page' : undefined}
               >
-                {label}
+                {friendly
+                  ? ({
+                      home: '首页',
+                      roadmaps: '开始学习',
+                      resources: '学习资料',
+                      trends: '行业变化',
+                      careers: '就业机会',
+                    }[key] ?? label)
+                  : label}
                 {key === 'careers' && <span className="nav-dot" />}
               </a>
             ))}
@@ -39,7 +53,7 @@ export default function Header({ section }: { section: string }) {
               <span>搜索</span>
               <kbd>⌕</kbd>
             </a>
-            <a href="/roadmaps/" className="header-start">
+            <a href={friendly ? '#my-start' : '/roadmaps/'} className="header-start">
               开始学习 <ArrowUpRight size={15} />
             </a>
             <button
