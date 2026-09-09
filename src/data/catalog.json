@@ -1,44 +1,628 @@
 {
-  "reviewedAt": "2026-09-07",
+  "reviewedAt": "2026-09-09",
   "resources": [
+    {
+      "id": "workbuddy",
+      "title": "WorkBuddy：完成你的第一个任务",
+      "description": "从下载安装到描述任务、查看产物，用自然语言让桌面助手开始处理工作。",
+      "source": "腾讯 WorkBuddy",
+      "url": "https://www.workbuddy.cn/docs/workbuddy/FirstTask",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "使用入门",
+      "tags": [
+        "直接使用 Agent"
+      ],
+      "mark": "WB",
+      "color": "green",
+      "category": "直接使用 Agent",
+      "prerequisite": "会安装软件、管理文件；不要求先学 Python。",
+      "start": "按“开启任务”完成一次文件整理，用练习文件检查结果。",
+      "outcome": "完成一个可检查的文档或文件处理任务。",
+      "access": "公开阅读；使用产品需登录，套餐与额度以官方为准。",
+      "reviewNote": "已核对官方正文；截图和菜单可能随版本变化。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://www.workbuddy.cn/docs/workbuddy/FirstTask"
+    },
+    {
+      "id": "hermes",
+      "title": "Hermes Agent 官方快速上手",
+      "description": "认识安装、模型连接和第一次对话入口，继续了解工具、记忆与 Skills 的使用。",
+      "source": "Nous Research",
+      "url": "https://hermes-agent.nousresearch.com/docs/zh-Hans/getting-started/quickstart",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "使用入门",
+      "tags": [
+        "直接使用 Agent"
+      ],
+      "mark": "H",
+      "color": "purple",
+      "category": "直接使用 Agent",
+      "prerequisite": "需要安装工具、配置模型服务；环境配置遇到困难时可以请老师协助。",
+      "start": "先读中文「快速入门」，按自己的系统完成安装，再用公开资料试一个小任务。",
+      "outcome": "让 Hermes 完成一次任务，并能找到、检查它生成的文件。",
+      "access": "公开阅读；模型服务、账号与运行费用另计。",
+      "reviewNote": "已核对官方简体中文快速入门与安装正文；平台支持等部分章节仍为英文。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://hermes-agent.nousresearch.com/docs/zh-Hans/getting-started/quickstart"
+    },
+    {
+      "id": "coze",
+      "title": "扣子：手把手搭建 AI Bot",
+      "description": "通过官方教程了解智能体、提示词、插件和知识库，体验可视化配置助手。",
+      "source": "扣子 · 火山引擎开发者社区",
+      "url": "https://developer.volcengine.com/articles/7389518892475318282",
+      "type": "图文教程",
+      "language": "中文",
+      "level": "可视化入门",
+      "tags": [
+        "可视化搭建"
+      ],
+      "mark": "扣",
+      "color": "purple",
+      "category": "可视化搭建",
+      "prerequisite": "会使用网页和整理资料；基础示例不要求编程。",
+      "start": "先看智能体介绍，再照着教程做一个资料问答助手。",
+      "outcome": "搭出一个能回答指定资料问题的助手。",
+      "access": "公开阅读；平台使用需账号，功能与收费以扣子当前说明为准。",
+      "reviewNote": "这是一份较早的官方教程，界面与当前产品可能不同；按原理学习，操作以现版为准。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://developer.volcengine.com/articles/7389518892475318282"
+    },
+    {
+      "id": "dify",
+      "title": "Dify：30 分钟快速入门",
+      "description": "跟着可视化流程做第一个 AI 应用，认识输入、模型处理和输出之间的关系。",
+      "source": "Dify",
+      "url": "https://docs.dify.ai/zh/quick-start",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "可视化入门",
+      "tags": [
+        "可视化搭建"
+      ],
+      "mark": "D",
+      "color": "green",
+      "category": "可视化搭建",
+      "prerequisite": "需要理解流程、配置模型服务；自行部署需要额外技术能力。",
+      "start": "使用已有可用的 Dify 环境，完成官方快速入门示例。",
+      "outcome": "得到一个能运行、能检查输入输出的 AI 工作流。",
+      "access": "公开阅读；云服务、模型调用或自行部署可能产生费用。",
+      "reviewNote": "已核对中文官方教程；不要把自行部署当成学员的第一步。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://docs.dify.ai/zh/quick-start"
+    },
+    {
+      "id": "n8n",
+      "title": "n8n：搭建第一个自动化工作流",
+      "description": "学习连接节点、运行流程和检查数据，为后续接入 AI 与工作工具打基础。",
+      "source": "n8n",
+      "url": "https://docs.n8n.io/build-your-first-workflow",
+      "type": "官方文档",
+      "language": "英文",
+      "level": "可视化入门",
+      "tags": [
+        "可视化搭建"
+      ],
+      "mark": "n8n",
+      "color": "orange",
+      "category": "可视化搭建",
+      "prerequisite": "需要理解流程和账号授权；复杂节点可能涉及表达式或代码。",
+      "start": "先完成普通工作流示例，再从官方 AI 文档中选一个用例。",
+      "outcome": "把一次手工信息处理拆成可以重复运行的流程。",
+      "access": "公开阅读；云服务、外部服务与自行部署费用另计。",
+      "reviewNote": "这是自动化基础教程，工作流不一定包含自主 Agent；已修正迁移后的文档入口。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://docs.n8n.io/build-your-first-workflow"
+    },
+    {
+      "id": "codex",
+      "title": "Codex CLI：与编程 Agent 开始协作",
+      "description": "从官方入口认识 Codex CLI，让 Agent 阅读项目、修改文件并执行检查。",
+      "source": "OpenAI",
+      "url": "https://learn.chatgpt.com/zh-Hans/docs/codex/cli",
+      "type": "官方文档",
+      "language": "英文",
+      "level": "协作入门",
+      "tags": [
+        "与 Agent 协作开发"
+      ],
+      "mark": "CX",
+      "color": "ink",
+      "category": "与 Agent 协作开发",
+      "prerequisite": "本页面向命令行与代码项目；需要能打开终端，理解文件和任务验收。",
+      "start": "先让它解释一个练习项目，再给一个小修改，并检查改动和运行结果。",
+      "outcome": "完成一次有需求、有修改、有检查的 Agent 协作任务。",
+      "access": "公开阅读；使用需符合官方账号、地区与计费条件。",
+      "reviewNote": "已优先使用官方简体中文入口；本次访问该页回退到英文，因此暂标英文，实际语言以原站为准。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://learn.chatgpt.com/zh-Hans/docs/codex/cli"
+    },
+    {
+      "id": "claude-code",
+      "title": "Claude Code 中文快速开始",
+      "description": "学习在项目里提问、提出改动、核对结果，开始与 Claude Code 协作。",
+      "source": "Anthropic",
+      "url": "https://code.claude.com/docs/zh-CN/quickstart",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "协作入门",
+      "tags": [
+        "与 Agent 协作开发"
+      ],
+      "mark": "CC",
+      "color": "orange",
+      "category": "与 Agent 协作开发",
+      "prerequisite": "这篇指南使用终端和代码项目；需要基本文件操作与检查结果的能力。",
+      "start": "从“这个项目做什么”开始，再给一个小改动任务。",
+      "outcome": "能描述需求，阅读修改内容，并检查一次运行结果。",
+      "access": "公开阅读；使用需符合官方账号、地区与订阅或 API 条件。",
+      "reviewNote": "已核对中文官方正文；产品和权限行为以当前版本为准。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://code.claude.com/docs/zh-CN/quickstart"
+    },
+    {
+      "id": "cursor",
+      "title": "Cursor Agent：读项目、改代码、跑检查",
+      "description": "了解编辑器里的 Agent 如何搜索项目、修改文件、调用终端，以及怎样给它任务。",
+      "source": "Cursor",
+      "url": "https://cursor.com/cn/docs/agent/overview",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "协作入门",
+      "tags": [
+        "与 Agent 协作开发"
+      ],
+      "mark": "CU",
+      "color": "ink",
+      "category": "与 Agent 协作开发",
+      "prerequisite": "需要能打开项目、理解文件与运行结果；工程交付仍需审查能力。",
+      "start": "先阅读 Agent 概览，再用一个练习项目尝试小修改。",
+      "outcome": "把一个明确的需求交给 Agent，并检查它改了什么。",
+      "access": "公开阅读；客户端账号、可用地区、套餐与模型额度以官方为准。",
+      "reviewNote": "已核对官方简体中文 Agent 正文；旧 /zh/docs 入口重定向到 /cn/docs，已使用最终中文地址。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://cursor.com/cn/docs/agent/overview"
+    },
+    {
+      "id": "trae",
+      "title": "TRAE / TraeCode 中文快速开始",
+      "description": "从安装和打开项目开始，认识 IDE、SOLO 模式与智能体协作入口。",
+      "source": "TRAE",
+      "url": "https://docs.trae.cn/ide_get-started-with-trae",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "协作入门",
+      "tags": [
+        "与 Agent 协作开发"
+      ],
+      "mark": "TR",
+      "color": "green",
+      "category": "与 Agent 协作开发",
+      "prerequisite": "会管理本地文件；项目运行、调试和交付仍需要相应知识。",
+      "start": "打开练习文件夹，提出一个小任务，查看预览和生成的文件。",
+      "outcome": "完成一次从需求到结果检查的编程 Agent 练习。",
+      "access": "公开阅读；客户端登录、套餐和使用额度以官方为准。",
+      "reviewNote": "已核对 TRAE 国内官方中文文档，页面当前名称为 TraeCode。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://docs.trae.cn/ide_get-started-with-trae"
+    },
+    {
+      "id": "hello-agents",
+      "title": "Datawhale Hello-Agents：从零开始构建智能体",
+      "description": "系统学习 Agent 范式、框架、记忆、评估与多智能体项目。这里的“从零”指构建入门。",
+      "source": "Datawhale",
+      "url": "https://hello-agents.datawhale.cc/",
+      "type": "系统课程",
+      "language": "中文",
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "DW",
+      "color": "blue",
+      "category": "原理与工程",
+      "prerequisite": "作者明确要求 Python 基础和大模型基本认知；不适合作为零编程学员的第一课。",
+      "start": "先看前言与目录；已有基础可选经典范式或一个项目章节动手。",
+      "outcome": "实现一个小型 Agent，并说明工具调用和检查方法。",
+      "access": "开源教程公开阅读；运行代码所需模型服务可能收费。",
+      "reviewNote": "已核对作者仓库正文与国内阅读入口；国内入口由项目 README 提供，未测全国网络可达性。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://github.com/datawhalechina/hello-agents"
+    },
     {
       "id": "hf-agents",
       "title": "Hugging Face Agents 中文课程",
-      "description": "从 Agent 基础概念到框架与项目实践，一条可以按单元推进的开放课程。",
+      "description": "按单元学习 Agent 概念、smolagents、LangGraph、LlamaIndex 与项目实践。",
       "source": "Hugging Face",
       "url": "https://huggingface.co/learn/agents-course/zh-CN/unit0/introduction",
       "type": "系统课程",
       "language": "中文",
-      "level": "入门",
-      "tags": ["Agent 基础", "项目实践"],
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
       "mark": "HF",
-      "color": "yellow"
+      "color": "yellow",
+      "category": "原理与工程",
+      "prerequisite": "官方要求 Python 基础和 LLM 基本认知，实操还需要 Hugging Face 账号。",
+      "start": "先看第 0 单元的学习要求，再选第 1 单元或一个框架单元。",
+      "outcome": "跑通一个课程 Agent，并记录它在任务中的表现。",
+      "access": "公开课程；实验环境、外部模型与认证规则以原站当前说明为准。",
+      "reviewNote": "已核对中文正文；其中认证段落仍含 2025 年截止日期，不据此承诺当前可获证书。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://huggingface.co/learn/agents-course/zh-CN/unit0/introduction"
+    },
+    {
+      "id": "microsoft-agents",
+      "title": "微软 AI Agents for Beginners",
+      "description": "通过课程与代码示例学习工具使用、规划、多智能体、记忆和工程实践。",
+      "source": "Microsoft",
+      "url": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/zh-CN/README.md",
+      "type": "系统课程",
+      "language": "中文",
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "MS",
+      "color": "blue",
+      "category": "原理与工程",
+      "prerequisite": "面向构建者；需要 Python、代码环境及模型调用的基本能力。",
+      "start": "直接阅读简体中文课程目录，先查看课程环境配置。",
+      "outcome": "完成一个示例，并用自己的测试输入检查结果。",
+      "access": "开源公开；实验所用账号、模型或云资源可能产生费用。",
+      "reviewNote": "已直连微软项目仓库的简体中文 README；翻译由项目自动化维护，需留意版本差异，视频与代码可能仍为英文。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://github.com/microsoft/ai-agents-for-beginners/blob/main/translations/zh-CN/README.md"
+    },
+    {
+      "id": "llm-universe",
+      "title": "Datawhale LLM Universe：大模型应用开发",
+      "description": "围绕个人知识库助手，学习模型调用、资料处理、检索问答和应用部署。",
+      "source": "Datawhale",
+      "url": "https://datawhalechina.github.io/llm-universe/",
+      "type": "系统课程",
+      "language": "中文",
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "DW",
+      "color": "blue",
+      "category": "原理与工程",
+      "prerequisite": "教程面向“小白开发者”，需要 Python 与运行代码的能力。",
+      "start": "先看项目介绍，选模型调用与知识库助手部分做一个小例子。",
+      "outcome": "构建一个能够引用自有资料的问答原型。",
+      "access": "开源公开；模型服务和部署资源可能收费。",
+      "reviewNote": "已核对项目仓库介绍与作者提供的在线阅读入口；旧代码依赖需按当前版本检查。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://github.com/datawhalechina/llm-universe"
+    },
+    {
+      "id": "all-in-rag",
+      "title": "Datawhale All-in-RAG：知识库与检索实战",
+      "description": "从资料清洗、分块、索引到检索评估，补齐知识库问答系统的工程能力。",
+      "source": "Datawhale",
+      "url": "https://datawhalechina.github.io/all-in-rag/",
+      "type": "系统课程",
+      "language": "中文",
+      "level": "工程进阶",
+      "tags": [
+        "原理与工程",
+        "RAG",
+        "知识库"
+      ],
+      "mark": "RAG",
+      "color": "blue",
+      "category": "原理与工程",
+      "prerequisite": "需要 Python 和 LLM 应用基础；适合已经做过简单问答原型的人。",
+      "start": "先理解数据处理与检索流程，再用一小份资料做对照实验。",
+      "outcome": "能解释问答错误来自资料、检索还是生成环节。",
+      "access": "开源公开；模型、向量服务和运行环境可能产生费用。",
+      "reviewNote": "已核对项目仓库；RAG 是相关专项能力，不等同于所有 Agent 的使用方式。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://github.com/datawhalechina/all-in-rag"
+    },
+    {
+      "id": "hf-mcp",
+      "title": "Hugging Face MCP 课程",
+      "description": "学习 MCP 概念、连接方式和开发实践，理解 Agent 怎样接入外部工具。",
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/learn/mcp-course/en/unit0/introduction",
+      "type": "系统课程",
+      "language": "英文",
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "HF",
+      "color": "yellow",
+      "category": "原理与工程",
+      "prerequisite": "概念部分可选读；动手开发需要 Python 或 TypeScript、命令行与 API 基础。",
+      "start": "先看第 0 单元，确认目标是使用连接器还是开发服务。",
+      "outcome": "做出一个小型工具连接，并能说明输入输出。",
+      "access": "公开课程；相关账号、模型和托管服务以原站为准。",
+      "reviewNote": "已核对英文课程介绍；认证与活动的时效需另查当前规则。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://huggingface.co/learn/mcp-course/en/unit0/introduction"
+    },
+    {
+      "id": "dl-agentic-ai",
+      "title": "吴恩达 Agentic AI 系统课程",
+      "description": "通过 Python 实现反思、工具使用、规划和多智能体模式，并学习评估与改进。",
+      "source": "DeepLearning.AI",
+      "url": "https://www.deeplearning.ai/courses/agentic-ai/",
+      "type": "系统课程",
+      "language": "英文",
+      "level": "工程进阶",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "AI",
+      "color": "orange",
+      "category": "原理与工程",
+      "prerequisite": "官方面向有中等 Python 能力及 LLM、API 基础的学习者。",
+      "start": "先读课程大纲与学习要求，再挑选一个设计模式完成实验。",
+      "outcome": "实现并评估一个多步骤 Agent 工作流。",
+      "access": "需平台账号；公开介绍中的 PRO 作业与证书等权益以当前套餐为准。",
+      "reviewNote": "已核对官方课程介绍、目录和先修要求，未进入付费课内评审。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://www.deeplearning.ai/courses/agentic-ai/"
+    },
+    {
+      "id": "dl-langgraph",
+      "title": "DeepLearning.AI：AI Agents in LangGraph",
+      "description": "先用 Python 实现 Agent，再学习 LangGraph、搜索、状态保存与人工介入。",
+      "source": "DeepLearning.AI · LangChain · Tavily",
+      "url": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/",
+      "type": "视频短课",
+      "language": "英文",
+      "level": "工程进阶",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "AI",
+      "color": "orange",
+      "category": "原理与工程",
+      "prerequisite": "官方要求中等 Python 能力；适合希望理解和控制 Agent 流程的开发者。",
+      "start": "先看 Build an Agent from Scratch，再对照 LangGraph Components。",
+      "outcome": "理解代码与模型各负责什么，并完成一个写作助手示例。",
+      "access": "需平台账号；课程访问、测验和证书权益以原站当前说明为准。",
+      "reviewNote": "已核对官方大纲；框架版本可能与录课时不同，运行时对照现版文档。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/"
+    },
+    {
+      "id": "langchain-academy",
+      "title": "LangChain Academy 官方课程中心",
+      "description": "集中查找 LangGraph、Deep Agents、LangSmith 等框架、观测和部署课程。",
+      "source": "LangChain",
+      "url": "https://academy.langchain.com/",
+      "type": "系统课程",
+      "language": "英文",
+      "level": "工程进阶",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "LC",
+      "color": "green",
+      "category": "原理与工程",
+      "prerequisite": "按课程区分先修要求，通常需要 Python 或 TypeScript 与模型调用基础。",
+      "start": "从 Foundation 或 Quickstart 分类选一门，与自己使用的框架对应。",
+      "outcome": "完成一个框架项目，或给已有 Agent 加上追踪与评估。",
+      "access": "有公开课程目录；学习账号、课程权益和配套云服务按原站说明。",
+      "reviewNote": "已核对公开目录，未逐课完成实验；这是课程中心，不是一门固定课程。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://academy.langchain.com/"
     },
     {
       "id": "qwen-agent",
       "title": "Qwen-Agent 开发指南",
-      "description": "了解工具调用、模型配置与工具接入，用一个具体框架连接概念和代码。",
+      "description": "通过 Qwen-Agent 的代码示例，学习模型配置、工具调用和自定义助手。",
       "source": "Qwen 官方文档",
       "url": "https://qwen.readthedocs.io/zh-cn/latest/framework/qwen_agent.html",
       "type": "官方文档",
       "language": "中文",
-      "level": "进阶",
-      "tags": ["工具调用", "Qwen"],
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
       "mark": "Q",
-      "color": "purple"
+      "color": "purple",
+      "category": "原理与工程",
+      "prerequisite": "需要 Python、软件包安装与模型 API 配置能力。",
+      "start": "先理解示例的模型配置与工具列表，再替换成自己的只读工具。",
+      "outcome": "运行一个能调用工具的 Qwen-Agent 示例。",
+      "access": "公开文档；模型服务或本地运行资源费用另计。",
+      "reviewNote": "已核对中文官方正文；示例模型与依赖按当前服务可用性调整。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://qwen.readthedocs.io/zh-cn/latest/framework/qwen_agent.html"
     },
     {
       "id": "mcp",
       "title": "MCP：连接模型与外部工具",
-      "description": "从官方介绍理解连接协议的角色，建立工具、资源和宿主之间的关系。",
+      "description": "从协议官方介绍理解 AI 应用、外部数据和工具之间如何建立连接。",
       "source": "Model Context Protocol",
       "url": "https://modelcontextprotocol.io/docs/getting-started/intro",
       "type": "官方文档",
       "language": "英文",
-      "level": "进阶",
-      "tags": ["MCP", "工具调用"],
+      "level": "概念与工程",
+      "tags": [
+        "原理与工程"
+      ],
       "mark": "↗",
-      "color": "ink"
+      "color": "ink",
+      "category": "原理与工程",
+      "prerequisite": "概念可选读；实现客户端或服务端需要开发基础。",
+      "start": "先读介绍，再按自己的目标选择使用连接器或开发服务。",
+      "outcome": "解释一个具体 MCP 连接的作用与权限范围。",
+      "access": "公开阅读；使用具体连接器或服务的费用另计。",
+      "reviewNote": "已核对官方介绍；协议文档不能替代具体产品的操作说明。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://modelcontextprotocol.io/docs/getting-started/intro"
+    },
+    {
+      "id": "langgraph",
+      "title": "LangGraph 官方开发文档",
+      "description": "了解有状态 Agent 的流程控制、持久化、人工介入和调试。",
+      "source": "LangChain",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "type": "官方文档",
+      "language": "英文",
+      "level": "工程进阶",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "LG",
+      "color": "green",
+      "category": "原理与工程",
+      "prerequisite": "需要 Python 与模型、工具概念；这是偏底层的编排框架。",
+      "start": "先读 Overview，再运行一个最小图，逐步加入状态保存。",
+      "outcome": "构建可检查状态、可恢复的多步骤 Agent。",
+      "access": "公开阅读；模型服务及可选托管与观测产品另计。",
+      "reviewNote": "已核对当前官方文档，旧教程 API 需对照版本。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://docs.langchain.com/oss/python/langgraph/overview"
+    },
+    {
+      "id": "openai-agents",
+      "title": "OpenAI Agents SDK 官方中文指南（Python）",
+      "description": "学习 Agent 运行循环、工具、交接、追踪与约束，并区分 SDK 和直接调用 API 的职责。",
+      "source": "OpenAI",
+      "url": "https://openai.github.io/openai-agents-python/zh/",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "OA",
+      "color": "ink",
+      "category": "原理与工程",
+      "prerequisite": "本入口为 Python SDK 中文文档，需要 Python、API 与运行环境基础。",
+      "start": "先读 SDK 与 Responses API 的分工，再运行官方快速示例。",
+      "outcome": "实现一个有工具和检查边界的小型 Agent。",
+      "access": "公开阅读；使用需符合官方账号、地区与 API 计费条件。",
+      "reviewNote": "已核对 OpenAI 官方 Python SDK 简体中文正文；SDK 开发与使用 Codex 是两条不同路径。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://openai.github.io/openai-agents-python/zh/"
+    },
+    {
+      "id": "google-adk",
+      "title": "Google ADK：构建第一个 Agent",
+      "description": "按语言选择快速入门，继续学习工具、多 Agent、运行和评估。",
+      "source": "Google",
+      "url": "https://adk.dev/get-started/",
+      "type": "官方文档",
+      "language": "英文",
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "G",
+      "color": "blue",
+      "category": "原理与工程",
+      "prerequisite": "需要一种受支持语言、开发环境和模型服务配置能力。",
+      "start": "选自己熟悉的语言，跑通最简单的官方 Agent。",
+      "outcome": "做出一个可运行、可测试的工具型助手。",
+      "access": "公开阅读；模型服务和云部署可能收费，账号与地区以官方为准。",
+      "reviewNote": "已核对 Google 官方项目重定向后的文档入口。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://adk.dev/get-started/"
+    },
+    {
+      "id": "crewai",
+      "title": "CrewAI 官方快速入门",
+      "description": "按角色和任务组织多个 Agent，学习创建项目与执行一个协作流程。",
+      "source": "CrewAI",
+      "url": "https://docs.crewai.com/en/quickstart",
+      "type": "官方文档",
+      "language": "英文",
+      "level": "开发入门",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "CR",
+      "color": "orange",
+      "category": "原理与工程",
+      "prerequisite": "需要 Python、命令行、模型服务与项目配置能力。",
+      "start": "先运行官方 quickstart，再把其中一个角色换成自己的任务。",
+      "outcome": "得到一个职责明确、可以逐步检查的多 Agent 示例。",
+      "access": "公开阅读；模型 API、托管等服务可能收费。",
+      "reviewNote": "已核对官方 quickstart；框架接口以原站当前版本为准。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://docs.crewai.com/en/quickstart"
+    },
+    {
+      "id": "agentscope",
+      "title": "AgentScope 官方开发文档",
+      "description": "学习 Agent 框架、工具执行与人工介入，继续了解会话管理和部署。",
+      "source": "AgentScope",
+      "url": "https://docs.agentscope.io/versions/2.0.8dev/zh",
+      "type": "官方文档",
+      "language": "中文",
+      "level": "工程进阶",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "AS",
+      "color": "purple",
+      "category": "原理与工程",
+      "prerequisite": "需要 Python 与 Agent 应用基础；适合工程开发者。",
+      "start": "先确认文档版本，再从中文「快速开始」的最小示例开始。",
+      "outcome": "运行一个工具型 Agent，再逐步加入会话与检查机制。",
+      "access": "公开阅读；模型服务与部署资源可能收费。",
+      "reviewNote": "已核对官方 2.0.8dev 简体中文正文与快速开始；该开发版与 1.0 不兼容，旧教程请匹配版本。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://docs.agentscope.io/versions/2.0.8dev/zh"
+    },
+    {
+      "id": "effective-agents",
+      "title": "Anthropic：Building Effective Agents",
+      "description": "理解固定工作流与自主 Agent 的区别，以及提示链、路由和评估改进模式。",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/engineering/building-effective-agents",
+      "type": "工程文章",
+      "language": "英文",
+      "level": "概念与工程",
+      "tags": [
+        "原理与工程"
+      ],
+      "mark": "AN",
+      "color": "orange",
+      "category": "原理与工程",
+      "prerequisite": "不要求跟写代码，但面向有软件与 LLM 应用背景的读者。",
+      "start": "带着一个业务流程阅读，判断其中哪些步骤适合固定流程。",
+      "outcome": "画出一个任务流程，并说明哪些地方需要人的判断。",
+      "access": "公开阅读。",
+      "reviewNote": "文章发布于 2024-12-19；官方已提醒工具生态发生变化，适合读设计原则。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://www.anthropic.com/engineering/building-effective-agents"
+    },
+    {
+      "id": "agent-skills",
+      "title": "Agent Skills：认识可复用的技能包",
+      "description": "理解 Skills 怎样把任务说明、参考资料与脚本组织成 Agent 可使用的技能。",
+      "source": "Agent Skills 官方规范",
+      "url": "https://agentskills.io/home",
+      "type": "官方文档",
+      "language": "英文",
+      "level": "进阶使用",
+      "tags": [
+        "与 Agent 协作开发"
+      ],
+      "mark": "SK",
+      "color": "yellow",
+      "category": "与 Agent 协作开发",
+      "prerequisite": "需要基本文件操作；使用技能与编写带脚本的技能，门槛不同。",
+      "start": "先看概览，理解技能包结构，再检查一个可信来源的简单技能。",
+      "outcome": "能说明一个技能做什么、需要什么资料，以及何时使用。",
+      "access": "公开阅读；具体 Agent、模型与配套服务另计。",
+      "reviewNote": "已核对规范入口；各工具支持情况和安装方式需看其自己的说明。",
+      "checkedAt": "2026-09-09",
+      "sourceUrl": "https://agentskills.io/home"
     }
   ],
   "roadmaps": [
@@ -51,7 +635,12 @@
       "level": "零基础",
       "duration": "4 个学习节点",
       "icon": "compass",
-      "nodes": ["understand", "task", "tools", "verify"]
+      "nodes": [
+        "understand",
+        "task",
+        "tools",
+        "verify"
+      ]
     },
     {
       "id": "builder",
@@ -62,7 +651,12 @@
       "level": "有编程基础",
       "duration": "4 个学习节点",
       "icon": "code",
-      "nodes": ["task", "tools", "retrieval", "verify"]
+      "nodes": [
+        "task",
+        "tools",
+        "retrieval",
+        "verify"
+      ]
     },
     {
       "id": "practice",
@@ -73,7 +667,12 @@
       "level": "已有实践经验",
       "duration": "4 个学习节点",
       "icon": "layers",
-      "nodes": ["tools", "retrieval", "verify", "delivery"]
+      "nodes": [
+        "tools",
+        "retrieval",
+        "verify",
+        "delivery"
+      ]
     }
   ],
   "nodes": [
@@ -83,52 +682,76 @@
       "description": "分清对话、固定流程与自主决策，建立最小概念地图。",
       "prerequisites": [],
       "tutorial": "agent-basics",
-      "resourceIds": ["hf-agents"],
+      "resourceIds": [
+        "hf-agents"
+      ],
       "outcome": "用自己的话解释 Agent 与固定工作流的区别。"
     },
     {
       "id": "task",
       "title": "定义一个好任务",
       "description": "把目标写成可检查的结果，明确输入和允许的操作。",
-      "prerequisites": ["understand"],
+      "prerequisites": [
+        "understand"
+      ],
       "tutorial": "define-a-task",
-      "resourceIds": ["hf-agents"],
+      "resourceIds": [
+        "hf-agents"
+      ],
       "outcome": "写出一个包含目标、输入、边界、验收条件的任务说明。"
     },
     {
       "id": "tools",
       "title": "连接工具与世界",
       "description": "理解工具的输入、输出和权限，用小范围的动作完成验证。",
-      "prerequisites": ["task"],
+      "prerequisites": [
+        "task"
+      ],
       "tutorial": "tool-contract",
-      "resourceIds": ["qwen-agent", "mcp"],
+      "resourceIds": [
+        "qwen-agent",
+        "mcp"
+      ],
       "outcome": "为一个只读工具写出参数、返回值和失败处理。"
     },
     {
       "id": "retrieval",
       "title": "检索与上下文",
       "description": "区分资料检索和回答生成，为输出保留可追溯的来源。",
-      "prerequisites": ["tools"],
+      "prerequisites": [
+        "tools"
+      ],
       "tutorial": null,
-      "resourceIds": ["hf-agents", "qwen-agent"],
+      "resourceIds": [
+        "hf-agents",
+        "qwen-agent"
+      ],
       "outcome": "在一个小型资料集中找出来源，并检查回答是否忠于来源。"
     },
     {
       "id": "verify",
       "title": "评估与纠错",
       "description": "检查结果、记录失败，判断继续执行还是交还给人。",
-      "prerequisites": ["tools"],
+      "prerequisites": [
+        "tools"
+      ],
       "tutorial": "define-a-task",
-      "resourceIds": ["hf-agents"],
+      "resourceIds": [
+        "hf-agents"
+      ],
       "outcome": "为任务列出一个成功样例和两个失败样例。"
     },
     {
       "id": "delivery",
       "title": "完成一次真实交付",
       "description": "将目标、过程记录和结果放在一起，让他人能够复查。",
-      "prerequisites": ["verify"],
+      "prerequisites": [
+        "verify"
+      ],
       "tutorial": "tool-contract",
-      "resourceIds": ["qwen-agent"],
+      "resourceIds": [
+        "qwen-agent"
+      ],
       "outcome": "提交一份包含运行说明、结果和限制的小项目记录。"
     }
   ],
@@ -139,7 +762,10 @@
       "title": "读懂工具连接，先从协议与边界开始",
       "description": "对照 MCP 官方介绍与 Qwen-Agent 工具配置，理解“接上工具”之后还需要检查什么。",
       "source": "MCP · Qwen 官方文档",
-      "resourceIds": ["mcp", "qwen-agent"],
+      "resourceIds": [
+        "mcp",
+        "qwen-agent"
+      ],
       "kind": "编辑导读"
     },
     {
@@ -148,7 +774,9 @@
       "title": "把学习路线的终点，设成一个可验证的项目",
       "description": "从课程单元走向项目实践：不仅记录学过什么，也记录做出了什么、如何证明。",
       "source": "Hugging Face Agents 课程",
-      "resourceIds": ["hf-agents"],
+      "resourceIds": [
+        "hf-agents"
+      ],
       "kind": "编辑导读"
     },
     {

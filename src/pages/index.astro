@@ -1,103 +1,14 @@
 ---
-import PracticeDiscovery from '../components/PracticeDiscovery';
-import { ProfileHero, ProfileObservations, ProfileCareer } from '../components/ProfileContent';
 import Base from '../layouts/Base.astro';
-import HeroMap from '../components/HeroMap';
-import {
-  ArrowUpRight,
-  Compass,
-  BookOpen,
-  Radio,
-  BriefcaseBusiness,
-  MoveUpRight,
-} from 'lucide-react';
-import catalog from '../data/catalog.json';
-import '../styles/competitor-watch.css';
+import HomeExperience from '../components/HomeExperience';
+import '../styles/home-experience.css';
+import '../styles/computer-recommendations.css';
 ---
 
-<Base>
-  <section class="hero container">
-    <div class="hero-copy">
-      <div class="eyebrow"><span class="short-line"></span> 给行动者的 AGENT 指南</div><h1>
-        学会 Agent，<br />看见<span class="hero-accent"
-          >下一步<svg viewBox="0 0 260 14" aria-hidden="true"
-            ><path d="M3 10Q120 1 255 8"></path></svg
-          ></span
-        >。
-      </h1><ProfileHero client:load /><div class="hero-footnote">
-        <span class="mini-seal">知</span><span>理解 · 实践 · 保持好奇</span><span
-          class="hero-footnote-divider"></span><span>简体中文 / 开放阅读</span>
-      </div>
-    </div>
-    <HeroMap client:visible />
-  </section>
-  <section class="topic-strip container" aria-label="探索方向">
-    <span class="strip-label">在这里，连接你的下一步</span><a href="/roadmaps/"
-      ><Compass size={17} />系统学习<ArrowUpRight size={13} /></a
-    ><a href="/resources/"><BookOpen size={17} />精选资料<ArrowUpRight size={13} /></a><a
-      href="/trends/"><Radio size={17} />技术与行业观察<ArrowUpRight size={13} /></a
-    ><a href="/careers/"><BriefcaseBusiness size={17} />职业发展<ArrowUpRight size={13} /></a>
-  </section>
-  <section class="container content-section">
-    <PracticeDiscovery client:load />
-  </section>
-  <section class="container content-section editorial-grid">
-    <div class="reading-column">
-      <div class="section-heading">
-        <div><div class="eyebrow">ON THE RADAR / 值得关注</div><h2>把变化，读成方向。</h2></div><a
-          class="text-link"
-          href="/trends/">全部观察 <ArrowUpRight size={17} /></a
-        >
-      </div><ProfileObservations client:load />
-    </div>
-    <aside class="career-feature">
-      <div class="career-feature-top">
-        <span><span class="status-dot"></span> CAREER RADAR</span><MoveUpRight size={25} />
-      </div><div class="radar-art" aria-hidden="true">
-        <span></span><span></span><span></span><i></i><b></b><em></em>
-      </div><div class="eyebrow">不只关心技术，也关心你。</div><h2>
-        下一份机会，<br />需要怎样的你？
-      </h2><p>从公开招聘入口出发，理解岗位职责，<br />把能力要求连接到你的学习路线。</p><a
-        href="/careers/"
-        class="career-cta">探索职业雷达 <ArrowUpRight size={18} /></a
-      ><small>首期开放观察入口与方法 · 趋势样本建设中</small>
-    </aside>
-  </section>
-  <div class="container"><ProfileCareer client:load /></div>
-  <section class="container content-section resources-section">
-    <div class="section-heading">
-      <div>
-        <div class="eyebrow">CURATED RESOURCES / 精选资料</div><h2>少一点搜寻，多一点收获。</h2>
-      </div><a class="text-link" href="/resources/">进入资料库 <ArrowUpRight size={17} /></a>
-    </div><div class="resource-preview-grid">
-      {
-        catalog.resources.map((r) => (
-          <a class="resource-preview" href={`/resources/${r.id}/`}>
-            <>
-              <div class={`resource-mark ${r.color}`}>{r.mark}</div>
-              <div class="resource-preview-body">
-                <>
-                  <span class="resource-source">
-                    {r.source} · {r.language}
-                  </span>
-                  <h3>{r.title}</h3>
-                  <p>{r.description}</p>
-                  <span class="resource-type">
-                    {r.type} <ArrowUpRight size={14} />
-                  </span>
-                </>
-              </div>
-            </>
-          </a>
-        ))
-      }
-    </div>
-  </section>
-  <section class="container closing-banner">
-    <div>
-      <span class="eyebrow">从今天的一个小实践开始</span><h2>不必等到全部学会，才开始创造。</h2>
-    </div><a href="/tutorials/agent-basics/" class="button primary"
-      >读第一篇入门教程 <ArrowUpRight size={18} /></a
-    >
-  </section>
+<Base
+  home
+  title="学会 Agent，给工作多一种可能。"
+  description="功夫酒馆，帮助普通人学会使用 Agent，提升就业与谋生能力。从你的基础出发，动手练习、留下作品、了解真实岗位。"
+>
+  <HomeExperience client:load />
 </Base>
